@@ -1618,8 +1618,7 @@ msgstr ""
 msgid ""
 "Align our suggestions with the most current, accepted [PEPs (Python "
 "Enhancement Protocols)](https://peps.python.org/pep-0000/) and the "
-"[Scientific Python community SPECs](https://scientific-"
-"python.org/specs/)."
+"[Scientific Python community SPECs](https://scientific-python.org/specs/)."
 msgstr ""
 
 #: ../../package-structure-code/intro.md:123
