@@ -70,6 +70,8 @@ def docs_live(session):
     cmd = [SPHINX_AUTO_BUILD, *BUILD_PARAMETERS, SOURCE_DIR, OUTPUT_DIR, *session.posargs]
     for folder in AUTOBUILD_IGNORE:
         cmd.extend(["--ignore", f"*/{folder}/*"])
+    # for folder in AUTOBUILD_INCLUDE:
+    #     cmd.extend(["--watch", folder])
     session.run(*cmd)
 
 @nox.session(name="docs-clean")
@@ -97,9 +99,7 @@ def translation_update(session):
 
 @nox.session(name="translation-build")
 def translation_build(session):
-    """
-    Build the translations for the project
-    """
+    """Build the translations of the guide"""
     BUILD_LANGUAGES = [lang for lang in LANGUAGES if lang not in EXCLUDE_FROM_BUILD_LANGUAGES]
     if not BUILD_LANGUAGES:
         session.warn("No languages specified for translation build")
