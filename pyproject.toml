@@ -27,7 +27,9 @@ dependencies = [
 [project.optional-dependencies]
 dev = [
     # for checking style rules
-    "vale"
+    "vale",
+    # for internationalization
+    "sphinx-intl",
 ]
 
 [tool.hatch.build.targets.wheel]
