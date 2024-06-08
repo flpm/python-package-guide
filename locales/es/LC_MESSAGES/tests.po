@@ -1,17 +1,17 @@
-# SOME DESCRIPTIVE TITLE.
+# PyOpenSci Packaging Guide.
 # Copyright (C) 2024, pyOpenSci
 # This file is distributed under the same license as the pyOpenSci Python
 # Package Guide package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+# Felipe Moreno <felipe@flpm.dev>, 2024.
 #
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: pyOpenSci Python Package Guide \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-06-05 16:05-0400\n"
+"POT-Creation-Date: 2024-06-05 16:34-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Last-Translator: Felipe Moreno <felipe@flpm.dev>\n"
 "Language: es\n"
 "Language-Team: es <LL@li.org>\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
@@ -22,31 +22,31 @@ msgstr ""
 
 #: ../../tests/index.md:72
 msgid "Intro"
-msgstr ""
+msgstr "Introducción"
 
 #: ../../tests/index.md:72
 msgid "Write tests"
-msgstr ""
+msgstr "Crea pruebas"
 
 #: ../../tests/index.md:72
 msgid "Test types"
-msgstr ""
+msgstr "Tipos de pruebas"
 
 #: ../../tests/index.md:72
 msgid "Run tests locally"
-msgstr ""
+msgstr "Ejecuta pruebas localmente"
 
 #: ../../tests/index.md:72
 msgid "Run tests online (using CI)"
-msgstr ""
+msgstr "Ejecuta pruebas en línea (usando CI)"
 
 #: ../../tests/index.md:72
 msgid "Create & Run Tests"
-msgstr ""
+msgstr "Crea y Ejecuta Pruebas"
 
 #: ../../tests/index.md:1
 msgid "Tests and data for your Python package"
-msgstr ""
+msgstr "Pruebas y datos para tu paquete de Python"
 
 #: ../../tests/index.md:3
 msgid ""
@@ -54,6 +54,9 @@ msgid ""
 " set of checks that ensure that your package is functioning how you "
 "expect it to."
 msgstr ""
+"Las pruebas son una parte importante de tu paquete de Python porque "
+"proporcionan un conjunto de comprobaciones que aseguran que tu paquete "
+"funciona como se espera."
 
 #: ../../tests/index.md:7
 msgid ""
@@ -61,10 +64,13 @@ msgid ""
 " for your Python package and how you can setup infrastructure to run your"
 " tests both locally and on GitHub."
 msgstr ""
+"En esta sección aprenderás más sobre la importancia de escribir pruebas "
+"para tu paquete de Python y cómo puedes configurar la infraestructura para"
+" ejecutar tus pruebas tanto localmente como en GitHub."
 
 #: ../../tests/index.md:19
 msgid "✨ Why write tests ✨"
-msgstr ""
+msgstr "✨ Por qué escribir pruebas ✨"
 
 #: ../../tests/index.md:24
 msgid ""
@@ -72,10 +78,13 @@ msgid ""
 "about why you should write tests and how they can help you and potential "
 "contributors to your project."
 msgstr ""
+"Aprende más sobre el arte de escribir pruebas para tu paquete de Python. "
+"Aprende por qué deberías escribir pruebas y cómo pueden ayudarte a ti y a "
+"los posibles contribuyentes a tu proyecto."
 
 #: ../../tests/index.md:31
 msgid "✨ Types of tests ✨"
-msgstr ""
+msgstr "✨ Tipos de pruebas ✨"
 
 #: ../../tests/index.md:36
 msgid ""
@@ -83,10 +92,13 @@ msgid ""
 " package: unit tests, integration tests and end-to-end (or functional) "
 "tests. Learn about all three."
 msgstr ""
+"Hay tres tipos generales de pruebas que puedes escribir para tu paquete de"
+" Python: pruebas unitarias, pruebas de integración y pruebas de extremo a "
+"extremo (o funcionales). Aprende sobre las tres."
 
 #: ../../tests/index.md:42
 msgid "✨ Run tests locally ✨"
-msgstr ""
+msgstr "✨ Ejecuta pruebas localmente ✨"
 
 #: ../../tests/index.md:47
 msgid ""
@@ -95,10 +107,15 @@ msgid ""
 "useful. Learn about the various tools that you can use to run your tests "
 "across python versions here."
 msgstr ""
+"Si esperas que tus usuarios utilicen tu paquete en diferentes versiones de"
+" Python, es importante usar una herramienta de automatización como nox "
+"para ejecutar tus pruebas. Aprende sobre las diversas herramientas que "
+"puedes usar para ejecutar tus pruebas en diferentes versiones de Python "
+"aquí."
 
 #: ../../tests/index.md:53
 msgid "✨ Run tests online (using CI) ✨"
-msgstr ""
+msgstr "✨ Ejecuta pruebas en línea (usando CI) ✨"
 
 #: ../../tests/index.md:58
 msgid ""
@@ -107,14 +124,18 @@ msgid ""
 "operating systems. Learn about setting up tests to run in Continuous "
 "Integration here."
 msgstr ""
+"Las plataformas de integración continua como las GitHub Actions pueden"
+" ser útiles para ejecutar tus pruebas en diferentes versiones de Python y"
+" en diferentes sistemas operativos. Aprende a configurar pruebas para que"
+" se ejecuten en la Integración Continua aquí."
 
 #: ../../tests/index.md:69
 msgid "Graphic showing the elements of the packaging process."
-msgstr ""
+msgstr "Ilustración que muestra los elementos del proceso de empaquetado."
 
 #: ../../tests/run-tests.md:6
 msgid "Run Python package tests"
-msgstr ""
+msgstr "Ejecuta pruebas de paquetes de Python"
 
 #: ../../tests/run-tests.md:8
 msgid ""
@@ -124,12 +145,20 @@ msgid ""
 " version and operating systems. Think about the following when running "
 "your tests:"
 msgstr ""
+"Ejecutar tus pruebas es importante para asegurarte de que tu paquete "
+"funciona como se espera. Es una buena práctica considerar que las pruebas"
+" se ejecutarán en tu computadora y en las computadoras de tus usuarios "
+"que pueden estar ejecutando una versión diferente de Python y sistemas "
+"operativos. Piensa en lo siguiente al ejecutar tus pruebas:"
 
 #: ../../tests/run-tests.md:11
 msgid ""
 "Run your test suite in a matrix of environments that represent the Python"
 " versions and operating systems your users are likely to have."
 msgstr ""
+"Ejecuta tu conjunto de pruebas en una matriz de entornos que representen "
+"las versiones de Python y los sistemas operativos que es probable que tus "
+"usuarios tengan."
 
 #: ../../tests/run-tests.md:12
 msgid ""
@@ -141,22 +170,33 @@ msgid ""
 " to issues when others try to install or run your package on their "
 "computers."
 msgstr ""
+"Ejecutar tus pruebas en un entorno aislado proporciona confianza en las "
+"pruebas y su reproducibilidad. Esto asegura que las pruebas no pasen "
+"aleatoriamente debido a la configuración específica de tu ordenador. Por"
+" ejemplo, podrías haber instalado dependencias inesperadamente en tu "
+"sistema local que no están declaradas en la lista de dependencias de tu "
+"paquete. Esta omisión podría provocar problemas cuando otros intenten "
+"instalar o ejecutar tu paquete en sus ordenadores."
 
 #: ../../tests/run-tests.md:14
 msgid ""
 "On this page, you will learn about the tools that you can use to both run"
 " tests in isolated environments and across Python versions."
 msgstr ""
+"En esta página, aprenderás sobre las herramientas que puedes usar para "
+"ejecutar pruebas en entornos aislados y en diferentes versiones de Python."
 
 #: ../../tests/run-tests.md:19
 msgid "Tools to run your tests"
-msgstr ""
+msgstr "Herramientas para ejecutar tus pruebas"
 
 #: ../../tests/run-tests.md:21
 msgid ""
 "There are three categories of tools that will make is easier to setup and"
 " run your tests in various environments:"
 msgstr ""
+"Hay tres categorías de herramientas que facilitarán la configuración y "
+"ejecución de tus pruebas en varios entornos:"
 
 #: ../../tests/run-tests.md:24
 msgid ""
@@ -170,6 +210,15 @@ msgid ""
 "don't provide a way to easily run tests across Python versions without "
 "the aid of additional automation tools."
 msgstr ""
+"Un **marco de pruebas** (test framework) es un paquete que proporciona una sintaxis "
+"particular y un conjunto de herramientas para _tanto escribir como ejecutar tus pruebas_. "
+"Algunos marcos de pruebas también tienen complementos que agregan funciones adicionales "
+"como evaluar cuánto de tu código cubren las pruebas. A continuación, aprenderás sobre el "
+"marco de pruebas **pytest**, que es uno de los marcos de pruebas de Python más utilizados en "
+"el ecosistema científico. Los marcos de pruebas son esenciales, pero solo sirven para ejecutar "
+"tus pruebas. Estos marcos no proporcionan una forma de ejecutar fácilmente pruebas en diferentes "
+"versiones de Python sin la ayuda de herramientas de automatización adicionales."
+
 
 #: ../../tests/run-tests.md:25
 msgid ""
@@ -183,6 +232,13 @@ msgid ""
 "build on different operating systems using only nox and tox - this is "
 "where continuous integration (CI) comes into play."
 msgstr ""
+"Las **herramientas de automatización** te permiten automatizar la ejecución de flujos de trabajo "
+"como pruebas de formas específicas utilizando comandos definidos por el usuario. Por ejemplo, es "
+"útil poder ejecutar pruebas en diferentes versiones de Python con un solo comando. Herramientas "
+"como [**nox**](https://nox.thea.codes/en/stable/index.html) y [**tox**](https://tox.wiki/en/latest/index.html) "
+"te permiten ejecutar pruebas en diferentes versiones de Python. Sin embargo, será difícil "
+"realizar pruebas en diferentes sistemas operativos utilizando solo nox y tox; aquí es donde "
+"entra en juego la integración continua (CI)."
 
 #: ../../tests/run-tests.md:26
 msgid ""
@@ -193,34 +249,39 @@ msgid ""
 "operating systems (Windows, Mac and Linux). [We discuss using CI to run "
 "tests here](tests-ci)."
 msgstr ""
+"**Integración continua (CI):** es la última herramienta que necesitarás para ejecutar tus pruebas. "
+"CI no solo te permitirá replicar cualquier compilación automatizada que crees utilizando nox o tox "
+"para ejecutar tu paquete en diferentes entornos de Python. También te permitirá ejecutar tus pruebas "
+"en diferentes sistemas operativos (Windows, Mac y Linux). [Discutimos el uso de CI para ejecutar pruebas "
+"aquí](tests-ci)."
 
 #: ../../tests/run-tests.md:28
 msgid "Table: Testing & Automation Tool"
-msgstr ""
+msgstr "Tabla: Herramientas de pruebas y automatización"
 
 #: ../../tests/run-tests.md:35
 msgid "Features"
-msgstr ""
+msgstr "Prestaciones"
 
 #: ../../tests/run-tests.md:36
 msgid "Testing Framework (pytest)"
-msgstr ""
+msgstr "Marcos de Pruebas (pytest)"
 
 #: ../../tests/run-tests.md:37
 msgid "Test Runner (Tox)"
-msgstr ""
+msgstr "Gestor de Pruebas (Tox)"
 
 #: ../../tests/run-tests.md:38
 msgid "Automation Tools (Nox)"
-msgstr ""
+msgstr "Herramientas de Automatización (Nox)"
 
 #: ../../tests/run-tests.md:39
 msgid "Continuous Integration (GitHub Actions)"
-msgstr ""
+msgstr "Integración Continua (GitHub Actions)"
 
 #: ../../tests/run-tests.md:40
 msgid "Run Tests Locally"
-msgstr ""
+msgstr "Ejecuta Pruebas Localmente"
 
 #: ../../tests/run-tests.md:41 ../../tests/run-tests.md:42
 #: ../../tests/run-tests.md:43 ../../tests/run-tests.md:49
@@ -243,39 +304,43 @@ msgstr ""
 
 #: ../../tests/run-tests.md:45
 msgid "Run Tests Online"
-msgstr ""
+msgstr "Ejecuta Pruebas en Línea"
 
 #: ../../tests/run-tests.md:50
 msgid "Run Tests Across Python Versions"
-msgstr ""
+msgstr "Ejecuta Pruebas en Diferentes Versiones de Python"
 
 #: ../../tests/run-tests.md:55
 msgid "Run Tests In Isolated Environments"
-msgstr ""
+msgstr "Ejecuta Pruebas en Entornos Aislados"
 
 #: ../../tests/run-tests.md:60
 msgid "Run Tests Across Operating Systems (Windows, MacOS, Linux)"
-msgstr ""
+msgstr "Ejecuta Pruebas en Diferentes Sistemas Operativos (Windows, MacOS, Linux)"
 
 #: ../../tests/run-tests.md:65
 msgid "Use for other automation tasks (e.g. building docs)"
-msgstr ""
+msgstr "Utilización para otras tareas de automatización (por ejemplo, construcción de documentación)"
 
 #: ../../tests/run-tests.md:73
 msgid "What testing framework / package should I use to run tests?"
-msgstr ""
+msgstr "Qué marco de pruebas / paquete debería usar para ejecutar pruebas?"
 
 #: ../../tests/run-tests.md:75
 msgid ""
 "We recommend using `Pytest` to build and run your package tests. Pytest "
 "is the most common testing tool used in the Python ecosystem."
 msgstr ""
+"Recomendamos usar `Pytest` para construir y ejecutar las pruebas de tu paquete. Pytest es la "
+"herramienta de pruebas más comúnmente utilizada en el ecosistema de Python."
 
 #: ../../tests/run-tests.md:77
 msgid ""
 "[The Pytest package](https://docs.pytest.org/en/latest/) also has a "
 "number of extensions that can be used to add functionality such as:"
 msgstr ""
+"[El paquete Pytest](https://docs.pytest.org/en/latest/) también tiene una serie de extensiones "
+"que se pueden utilizar para agregar funcionalidades como:"
 
 #: ../../tests/run-tests.md:80
 msgid ""
@@ -283,15 +348,17 @@ msgid ""
 "analyze the code coverage of your package during your tests, and "
 "generates a report that you can [upload to codecov](https://codecov.io/)."
 msgstr ""
+"[pytest-cov](https://pytest-cov.readthedocs.io/en/latest/) te permite analizar la cobertura de "
+"código de tu paquete durante tus pruebas, y genera un informe que puedes [subir a codecov](https://codecov.io/)."
 
 #: ../../tests/run-tests.md:82 ../../tests/run-tests.md:174
 #: ../../tests/test-types.md:14 ../../tests/tests-ci.md:7
 msgid "Todo"
-msgstr ""
+msgstr "Todo"
 
 #: ../../tests/run-tests.md:83
 msgid "Learn more about code coverage here. (add link)"
-msgstr ""
+msgstr "Aprende más sobre la cobertura de código aquí. (agregar enlace)"
 
 #: ../../tests/run-tests.md:87
 msgid ""
@@ -299,34 +366,41 @@ msgid ""
 "setting breakpoints, and toggling the `–no-cov` flag. Check your editor's"
 " documentation for more information."
 msgstr ""
+"Tu editor o IDE puede agregar comodidades adicionales para ejecutar pruebas, establecer puntos de "
+"interrupción y alternar el parámetro `–no-cov`. Consulta la documentación de tu editor para obtener "
+"más información."
 
 #: ../../tests/run-tests.md:90
 msgid "Run tests using pytest"
-msgstr ""
+msgstr "Ejecuta pruebas usando pytest"
 
 #: ../../tests/run-tests.md:92
 msgid "If you are using **pytest**, you can run your tests locally by calling:"
-msgstr ""
+msgstr "Si estás usando **pytest**, puedes ejecutar tus pruebas localmente llamando:"
 
 #: ../../tests/run-tests.md:95
 msgid "`pytest`"
-msgstr ""
+msgstr "`pytest`"
 
 #: ../../tests/run-tests.md:97
 msgid ""
 "Or if you want to run a specific test file - let's call this file "
 "\"`test_module.py`\" - you can run:"
 msgstr ""
+"O si deseas ejecutar un archivo de prueba específico - por ejemplo \"`test_module.py`\" - puedes "
+"ejecutar:"
 
 #: ../../tests/run-tests.md:99
 msgid "`pytest test_module.py`"
-msgstr ""
+msgstr "`pytest test_module.py`"
 
 #: ../../tests/run-tests.md:101
 msgid ""
 "Learn more from the [get started docs](https://docs.pytest.org/en/7.1.x"
 "/getting-started.html)."
 msgstr ""
+"Aprende más en la [documentación de inicio](https://docs.pytest.org/en/7.1.x"
+"/getting-started.html)."
 
 #: ../../tests/run-tests.md:103
 msgid ""
@@ -335,26 +409,33 @@ msgid ""
 "will be run on a single version of Python and only on the operating "
 "system that you are running locally."
 msgstr ""
+"Ejecutar pytest en tu ordenador ejecutará tus pruebas en el entorno de Python que tengas activado "
+"actualmente. Esto significa que las pruebas se ejecutarán en una sola versión de Python y solo en "
+"el sistema operativo que estás ejecutando localmente."
 
 #: ../../tests/run-tests.md:108
 msgid ""
 "An automation tool can simplify the process of running tests in various "
 "Python environments."
 msgstr ""
+"Una herramienta de automatización puede simplificar el proceso de ejecutar pruebas en varios "
+"entornos de Python."
 
 #: ../../tests/run-tests.md:111
 msgid "Tests across operating systems"
-msgstr ""
+msgstr "Pruebas en diferentes sistemas operativos"
 
 #: ../../tests/run-tests.md:112
 msgid ""
 "If you want to run your tests across different operating systems you can "
 "[continuous integration. Learn more here](tests-ci)."
 msgstr ""
+"Si deseas ejecutar tus pruebas en diferentes sistemas operativos, puedes utilizar [la integración "
+"continua. Aprende más aquí](tests-ci)."
 
 #: ../../tests/run-tests.md:115
 msgid "Tools to automate running your tests"
-msgstr ""
+msgstr "Herramientas para automatizar la ejecución de tus pruebas"
 
 #: ../../tests/run-tests.md:117
 msgid ""
@@ -364,6 +445,10 @@ msgid ""
 "environments. This allows you to easily run your tests in multiple "
 "environments and across Python versions."
 msgstr ""
+"Para ejecutar pruebas en varias versiones de Python o en varios entornos específicos con un solo "
+"comando, puedes utilizar una herramienta de automatización como `nox` o `tox`. Tanto `nox` como "
+"`tox` pueden crear entornos virtuales aislados. Esto te permite ejecutar fácilmente tus pruebas en "
+"múltiples entornos y en diferentes versiones de Python."
 
 #: ../../tests/run-tests.md:120
 msgid ""
@@ -373,10 +458,14 @@ msgid ""
 "and development workflows. Everything that you do with `nox` can be "
 "implemented using a Python-based interface."
 msgstr ""
+"Nos centraremos en [Nox](https://nox.thea.codes/) en esta guía. `nox` es una herramienta de "
+"automatización en Python que se basa en las características de `make` y `tox`. `nox` está "
+"diseñado para simplificar y optimizar los flujos de trabajo de pruebas y desarrollo. Todo lo que "
+"haces con `nox` se puede implementar utilizando una interfaz basada en Python."
 
 #: ../../tests/run-tests.md:122
 msgid "Other automation tools you'll see in the wild"
-msgstr ""
+msgstr "Otras herramientas de automatización que encontrarás"
 
 #: ../../tests/run-tests.md:125
 msgid ""
@@ -387,6 +476,10 @@ msgid ""
 "documentation](https://docs.plasmapy.org/en/stable/contributing/testing_guide.html"
 "#using-tox)."
 msgstr ""
+"**[Tox](https://tox.wiki/en/latest/index.html#useful-links)** es una herramienta de automatización "
+"que admite pasos comunes como la construcción de documentación, la ejecución de pruebas en varias "
+"versiones de Python y más. Puedes encontrar [una buena descripción general de tox en la documentación "
+"de plasmaPy](https://docs.plasmapy.org/en/stable/contributing/testing_guide.html#using-tox)."
 
 #: ../../tests/run-tests.md:127
 msgid ""
@@ -397,6 +490,11 @@ msgid ""
 "support your packaging workflow, you may want to also use its testing "
 "capabilities rather than using `nox`."
 msgstr ""
+"**[Hatch](https://github.com/ofek/hatch)** es una herramienta de empaquetado moderna de extremo a "
+"extremo que funciona con el popular backend de construcción llamado hatchling. `hatch` ofrece una "
+"configuración similar a `tox` donde puedes ejecutar pruebas localmente utilizando diferentes versiones "
+"de Python. Si estás utilizando `hatch` para implementar tu flujo de trabajo de empaquetado, puedes "
+"considerar utilizar sus capacidades de pruebas en lugar de usar `nox`."
 
 #: ../../tests/run-tests.md:129
 msgid ""
@@ -408,22 +506,28 @@ msgid ""
 "not already familiar with it. Make also won't manage environments for you"
 " like **nox** will do."
 msgstr ""
+"[**make:**](https://www.gnu.org/software/make/manual/make.html) Algunos desarrolladores utilizan "
+"Make, que es una herramienta de automatización de construcción, para ejecutar pruebas debido a su "
+"versatilidad; no está vinculado a un lenguaje específico y se puede utilizar para ejecutar varios "
+"procesos de construcción. Sin embargo, la sintaxis y el enfoque únicos de Make pueden hacer que sea "
+"más difícil de aprender, especialmente si no estás familiarizado con él. Make tampoco administrará "
+"entornos para ti como lo hará **nox**."
 
 #: ../../tests/run-tests.md:136
 msgid "Run tests across Python versions with nox"
-msgstr ""
+msgstr "Ejecuta pruebas en diferentes versiones de Python con nox"
 
 #: ../../tests/run-tests.md:138
 msgid "**Nox** is a great automation tool to learn because it:"
-msgstr ""
+msgstr "**Nox** es una herramienta de automatización muy buena para aprender porque:"
 
 #: ../../tests/run-tests.md:140
 msgid "Is Python-based making it accessible if you already know Python and"
-msgstr ""
+msgstr "Esta basada en Python, lo que la hace accesible si ya conoces Python y"
 
 #: ../../tests/run-tests.md:141
 msgid "Will create isolated environments to run workflows."
-msgstr ""
+msgstr "Creará entornos aislados para ejecutar flujos de trabajo."
 
 #: ../../tests/run-tests.md:143
 msgid ""
@@ -431,10 +535,13 @@ msgid ""
 "you can set up virtual environments, and run tests across Python versions"
 " using the environment manager of your choice with a single command."
 msgstr ""
+"`nox` simplifica la creación y gestión de entornos de pruebas. Con `nox`, puedes configurar entornos "
+"virtuales y ejecutar pruebas en diferentes versiones de Python utilizando el administrador de entornos "
+"de tu elección con un solo comando."
 
 #: ../../tests/run-tests.md:148
 msgid "Nox Installations"
-msgstr ""
+msgstr "Instalación de Nox"
 
 #: ../../tests/run-tests.md:150
 msgid ""
@@ -442,10 +549,13 @@ msgid ""
 "versions, nox will create and manage individual `venv` environments for "
 "each Python version that you specify in the nox function."
 msgstr ""
+"Cuando instalas y usas nox para ejecutar pruebas en diferentes versiones de Python, nox creará y "
+"administrará entornos `venv` individuales para cada versión de Python que especifiques en la función "
+"nox."
 
 #: ../../tests/run-tests.md:152
 msgid "Nox will manage each environment on its own."
-msgstr ""
+msgstr "Nox administrará cada entorno por separado."
 
 #: ../../tests/run-tests.md:154
 msgid ""
@@ -454,6 +564,9 @@ msgid ""
 "installations across both PyPI related environments (e.g. venv, "
 "virtualenv) and `conda` (e.g. `conda-forge`)."
 msgstr ""
+"Nox también se puede utilizar para otras tareas de desarrollo como construir documentación, crear la "
+"distribución de tu paquete y probar instalaciones en entornos relacionados con PyPI (por ejemplo, venv, "
+"virtualenv) y `conda` (por ejemplo, `conda-forge`)."
 
 #: ../../tests/run-tests.md:158
 msgid ""
@@ -461,10 +574,12 @@ msgid ""
 "your project directory. You then define commands using Python functions. "
 "Some examples of that are below."
 msgstr ""
+"Para empezar, creas un archivo `noxfile.py` en la raíz del directorio de tu proyecto. Luego, "
+"defines comandos utilizando funciones de Python. Algunos ejemplos están disponibles a continuación."
 
 #: ../../tests/run-tests.md:162
 msgid "Test Environments"
-msgstr ""
+msgstr "Entornos de Prueba"
 
 #: ../../tests/run-tests.md:164
 msgid ""
@@ -475,34 +590,47 @@ msgid ""
 " not interfere with each other, promoting a clean and organized "
 "development environment."
 msgstr ""
+"Por defecto, `nox` utiliza el administrador de entornos `venv` integrado en Python. Un "
+"entorno virtual (`venv`) es un entorno de Python autocontenido que te permite aislar y gestionar "
+"dependencias para diferentes proyectos de Python. Estos entornos ayudan a garantizar que las "
+"bibliotecas y paquetes específicos del proyecto no interfieran entre sí, promoviendo un entorno de "
+"desarrollo limpio y organizado."
+
 
 #: ../../tests/run-tests.md:166
 msgid ""
 "An example of using nox to run tests in `venv` environments for Python "
 "versions 3.9, 3.10, 3.11 and 3.12 is below."
 msgstr ""
+"Un ejemplo de cómo usar nox para ejecutar pruebas en entornos `venv` para las versiones de Python 3.9, "
+"3.10, 3.11 y 3.12 está a continuación."
 
 #: ../../tests/run-tests.md:169
 msgid ""
 "Note that for the code below to work, you need to have all 4 versions of "
 "Python installed on your computer for `nox` to find."
 msgstr ""
+"Ten en cuenta que para que el código a continuación funcione, necesitas tener las 4 versiones de "
+"Python instaladas en tu ordenador para que `nox` las encuentre."
 
 #: ../../tests/run-tests.md:172
 msgid "Nox with venv environments"
-msgstr ""
+msgstr "Nox con entornos venv"
 
 #: ../../tests/run-tests.md:175
 msgid ""
 "TODO: add some tests above and show what the output would look like in "
 "the examples below..."
 msgstr ""
+"TODO: añadir algunas pruebas arriba y mostrar cómo sería la salida en los ejemplos a continuación..."
 
 #: ../../tests/run-tests.md:178
 msgid ""
 "Below is an example of setting up nox to run tests using `venv` which is "
 "the built in environment manager that comes with base Python."
 msgstr ""
+"A continuación se muestra un ejemplo de cómo configurar nox para ejecutar pruebas utilizando `venv`, "
+"que es el administrador de entornos integrado que viene con Python."
 
 #: ../../tests/run-tests.md:180
 msgid ""
@@ -511,6 +639,9 @@ msgid ""
 "understand](../package-structure-code/declare-dependencies.md). An "
 "example of that setup is below."
 msgstr ""
+"Ten en cuenta que el ejemplo a continuación asume que has [configurado tu `pyproject.toml` para "
+"declarar las dependencias de prueba de una manera que pip pueda entender](../package-structure-code/declare-dependencies.md). "
+"Un ejemplo de esa configuración está a continuación."
 
 #: ../../tests/run-tests.md:201
 msgid ""
@@ -519,6 +650,9 @@ msgid ""
 " that below one single nox session allows you to run your tests on 4 "
 "different Python environments (Python 3.9, 3.10, 3.11, and 3.12)."
 msgstr ""
+"Si tienes la configuración anterior, puedes usar `session.install(\".[tests]\")` para instalar tus "
+"dependencias de prueba. Observa que a continuación una sola sesión de nox te permite ejecutar tus "
+"pruebas en 4 entornos de Python diferentes (Python 3.9, 3.10, 3.11 y 3.12)."
 
 #: ../../tests/run-tests.md:222
 msgid ""
@@ -526,6 +660,8 @@ msgid ""
 "`@nox.session` decorator. Notice that within the decorator you declare "
 "the versions of python that you wish to run."
 msgstr ""
+"Arriba creas una sesión de nox en forma de función con el decorador `@nox.session`. Observa que "
+"dentro del decorador declaras las versiones de Python que deseas ejecutar."
 
 #: ../../tests/run-tests.md:226
 msgid ""
@@ -533,10 +669,12 @@ msgid ""
 "session with `--session` (sometimes shortened to `-s`). Your function "
 "above is called test, therefore the session name is test."
 msgstr ""
+"Para ejecutar lo anterior, utlizarías el siguiente comando, especificando qué sesión con `--session` "
+"(a veces abreviado a `-s`). Tu función se llama test, por lo tanto, el nombre de la sesión es test."
 
 #: ../../tests/run-tests.md:234
 msgid "Nox with conda / mamba"
-msgstr ""
+msgstr "Nox con conda / mamba"
 
 #: ../../tests/run-tests.md:236
 msgid ""
@@ -546,58 +684,65 @@ msgid ""
 "install all four Python versions if you use conda/mamba, like you do with"
 " `venv`."
 msgstr ""
+"A continuación se muestra un ejemplo de como configurar nox para usar mamba (o conda) como administrador "
+"de entornos. Ten en cuenta que, a diferencia de venv, conda puede instalar automáticamente las diferentes "
+"versiones de Python que necesitas. No necesitarás instalar las cuatro versiones de Python si usas conda/mamba, "
+"como lo tienes que hacer con `venv`."
 
 #: ../../tests/run-tests.md:242
 msgid ""
 "For `conda` to work with `nox`, you will need to ensure that either "
 "`conda` or `mamba` is installed on your computer."
 msgstr ""
+"Para que `conda` funcione con `nox`, deberás asegurarte de que `conda` o `mamba` estén instalados en tu ordenador."
 
 #: ../../tests/run-tests.md:264
 msgid "To run the above session you'd use:"
-msgstr ""
+msgstr "Para ejecutar la sesión anterior, usarías:"
 
 #: ../../tests/test-types.md:1
 msgid "Test Types for Python packages"
-msgstr ""
+msgstr "Pruebas para paquetes de Python"
 
 #: ../../tests/test-types.md:3
 msgid "Three types of tests: Unit, Integration & Functional Tests"
-msgstr ""
+msgstr "Tres tipos de pruebas: Pruebas Unitarias, de Integración y Funcionales"
 
 #: ../../tests/test-types.md:5
 msgid ""
 "There are different types of tests that you want to consider when "
 "creating your test suite:"
-msgstr ""
+msgstr "Existen diferentes tipos de pruebas que debes considerar al crear tu conjunto de pruebas:"
 
 #: ../../tests/test-types.md:8
 msgid "Unit tests"
-msgstr ""
+msgstr "Pruebas Unitarias"
 
 #: ../../tests/test-types.md:9
 msgid "Integration"
-msgstr ""
+msgstr "Integración"
 
 #: ../../tests/test-types.md:10
 msgid "End-to-end (also known as Functional) tests"
-msgstr ""
+msgstr "Pruebas de extremo a extremo (o Funcionales)"
 
 #: ../../tests/test-types.md:12
 msgid ""
 "Each type of test has a different purpose. Here, you will learn about all"
 " three types of tests."
-msgstr ""
+msgstr "Cada tipo de prueba tiene un propósito diferente. Aquí aprenderás sobre los tres tipos de pruebas."
 
 #: ../../tests/test-types.md:15
 msgid ""
 "I think this page would be stronger if we did have some examples from our"
 " package here: https://github.com/pyOpenSci/pyosPackage"
 msgstr ""
+"Creo que esta página sería más sólida si tuviéramos algunos ejemplos de nuestro paquete aquí: "
+"https://github.com/pyOpenSci/pyosPackage"
 
 #: ../../tests/test-types.md:20
 msgid "Unit Tests"
-msgstr ""
+msgstr "Pruebas Unitarias"
 
 #: ../../tests/test-types.md:22
 msgid ""
@@ -606,6 +751,9 @@ msgid ""
 " to verify that each part of the software, typically at the function or "
 "method level, performs its intended task correctly."
 msgstr ""
+"Una prueba unitaria implica probar componentes individuales o unidades de código de forma aislada "
+"para asegurarse de que funcionen correctamente. El objetivo de las pruebas unitarias es verificar "
+"que cada parte del software, típicamente a nivel de función o método, realiza correctamente su función prevista."
 
 #: ../../tests/test-types.md:24
 msgid ""
@@ -615,6 +763,10 @@ msgid ""
 "with code, tests ensure that each function, attribute, class, method "
 "works properly when isolated."
 msgstr ""
+"Las pruebas unitarias se pueden comparar con examinar cada pieza de un rompecabezas para asegurarte "
+"de que ninguna parte esté rota. Si todas las piezas de tu rompecabezas no encajan, nunca lo completarás. "
+"De manera similar, al trabajar con código, las pruebas aseguran que cada función, atributo, clase, método "
+"funciona correctamente cuando está aislado."
 
 #: ../../tests/test-types.md:26
 msgid ""
@@ -624,28 +776,36 @@ msgid ""
 "returns the correct value in degrees Fahrenheit. That function is a unit "
 "test. It checks a single unit (function) in your code."
 msgstr ""
+"**Ejemplo de prueba unitaria:** Imagina que tienes una función que convierte un valor de temperatura de "
+"Celsius a Fahrenheit. Una prueba para esa función podría asegurarse de que, al proporcionar un valor en "
+"Celsius, la función devuelva el valor correcto en grados Fahrenheit. Esa función es una prueba unitaria. "
+"Comprueba una sola unidad (función) en tu código."
 
 #: ../../tests/test-types.md:44
 msgid ""
 "Example unit test for the above function. You'd run this test using the "
 "`pytest` command in your **tests/** directory."
 msgstr ""
+"Ejemplo de prueba unitaria para la función anterior. Ejecutarías esta prueba utilizando el comando "
+"`pytest` en tu directorio **tests/**."
 
 #: ../../tests/test-types.md:65 ../../tests/test-types.md:115
 msgid ""
 "image of puzzle pieces that all fit together nicely. The puzzle pieces "
 "are colorful - purple, green and teal."
 msgstr ""
+"imagen de las piezas de un rompecabezas que encajan perfectamente. Las piezas del rompecabezas tiene colores - "
+"púrpura, verde y turquesa."
 
 #: ../../tests/test-types.md:69
 msgid ""
 "Your unit tests should ensure each part of your code works as expected on"
 " its own."
-msgstr ""
+msgstr "Tus pruebas unitarias deben asegurarse de que cada parte de tu código funciona como se espera por sí sola."
 
 #: ../../tests/test-types.md:72
 msgid "Integration tests"
-msgstr ""
+msgstr "Pruebas de Integración"
 
 #: ../../tests/test-types.md:74
 msgid ""
@@ -654,6 +814,10 @@ msgid ""
 " puzzle pieces together to form a whole picture. Integration tests focus "
 "on how different pieces of your code fit and work together."
 msgstr ""
+"Las pruebas de integración implican probar cómo funcionan juntas o se integran las partes de tu paquete. "
+"Las pruebas de integración se pueden comparar con conectar muchas de piezas de rompecabezas para formar "
+"una imagen completa. Las pruebas de integración se centran en cómo encajan y funcionan juntas las diferentes "
+"partes de tu código."
 
 #: ../../tests/test-types.md:76
 msgid ""
@@ -663,6 +827,10 @@ msgid ""
 "integration test would ensure that all parts of that workflow behaved as "
 "expected."
 msgstr ""
+"Por ejemplo, si tuvieras una serie de pasos que recopilaran datos de temperatura en una hoja de cálculo, "
+"los convirtieran de grados Celsius a Fahrenheit y luego proporcionaran una temperatura promedio para un "
+"período de tiempo determinado. Una prueba de integración aseguraría que todas las partes de ese flujo de "
+"trabajo se comportaran como se espera."
 
 #: ../../tests/test-types.md:107
 msgid ""
@@ -670,6 +838,8 @@ msgid ""
 " purple teal yellow and blue. The shapes of each piece don’t fit "
 "together."
 msgstr ""
+"imagen de dos piezas de rompecabezas con algunas partes faltantes. Las piezas del rompecabezas son de color "
+"púrpura, turquesa, amarillo y azul. Las formas de cada pieza no encajan juntas."
 
 #: ../../tests/test-types.md:112
 msgid ""
@@ -678,16 +848,21 @@ msgid ""
 "methods and classes in your software. The code needs to work both "
 "individually and together to perform certain sets of tasks."
 msgstr ""
+"Si las piezas de un rompecabezas tienen extremos faltantes, no pueden funcionar juntas con otros elementos "
+"del rompecabezas. Lo mismo ocurre con las funciones, métodos y clases individuales en tu software. El "
+"código necesita funcionar tanto individualmente como en conjunto para realizar ciertas tareas."
 
 #: ../../tests/test-types.md:120
 msgid ""
 "Your integration tests should ensure that parts of your code that are "
 "expected to work together, do so as expected."
 msgstr ""
+"Tus pruebas de integración deben asegurarse de que las partes de tu código que se espera que funcionen "
+"juntas, lo hagan como se espera."
 
 #: ../../tests/test-types.md:124
 msgid "End-to-end (functional) tests"
-msgstr ""
+msgstr "Pruebas de extremo a extremo (funcionales)"
 
 #: ../../tests/test-types.md:126
 msgid ""
@@ -700,16 +875,25 @@ msgid ""
 "your software a final check before it's put into action, making sure it's"
 " ready to deliver a smooth experience to its users."
 msgstr ""
+"Las pruebas de extremo a extremo (también conocidas como pruebas funcionales) en Python son como listas "
+"de verificación completas para tu software. Simulan flujos de trabajo de extremo a extremo de usuarios "
+"reales para asegurarse de que el código soporta aplicaciones y casos de uso reales de "
+"principio a fin. Estas pruebas ayudan a detectar problemas que podrían no aparecer en pruebas más pequeñas "
+"y aseguran que toda tu aplicación o programa se comporta correctamente. Son como una forma de "
+"darle a tu software una revisión final antes de ponerlo en acción, asegurándote de que esté listo para "
+"proporcionar una experiencia fluida a tus usuarios."
 
 #: ../../tests/test-types.md:128
 msgid "Image of a completed puzzle showing a daisy"
-msgstr ""
+msgstr "Imagen de un rompecabezas completado que muestra una margarita"
 
 #: ../../tests/test-types.md:133
 msgid ""
 "End-to-end or functional tests represent an entire workflow that you "
 "expect your package to support."
 msgstr ""
+"Las pruebas de extremo a extremo o funcionales representan un flujo de trabajo completo que esperas que "
+"tu paquete soporte."
 
 #: ../../tests/test-types.md:137
 msgid ""
@@ -717,6 +901,9 @@ msgid ""
 "tutorial that you add to your documentation that runs in CI in an "
 "isolated environment is another example of an end-to-end test."
 msgstr ""
+"Las pruebas de extremo a extremo también prueban cómo se ejecuta un programa de principio a fin. Un "
+"tutorial que añades a tu documentación que se ejecuta en CI en un entorno aislado es otro ejemplo de "
+"una prueba de extremo a extremo."
 
 #: ../../tests/test-types.md:140
 msgid ""
@@ -724,10 +911,13 @@ msgid ""
 "workflows that your package supports, that are run when your "
 "documentation is built could also serve as end-to-end tests."
 msgstr ""
+"Para paquetes científicos, crear tutoriales cortos que destaquen flujos de trabajo fundamentales que tu "
+"paquete soporta, que se ejecutan cuando se construye tu documentación, también podría servir como pruebas "
+"de extremo a extremo."
 
 #: ../../tests/test-types.md:143
 msgid "Comparing unit, integration and end-to-end tests"
-msgstr ""
+msgstr "Comparando pruebas unitarias, de integración y de extremo a extremo"
 
 #: ../../tests/test-types.md:145
 msgid ""
@@ -737,6 +927,10 @@ msgid ""
 "tests are not useful for verifying that different sections of code work "
 "together."
 msgstr ""
+"Las pruebas unitarias, las pruebas de integración y las pruebas de extremo a extremo tienen ventajas y "
+"desventajas complementarias. La naturaleza detallada de las pruebas unitarias las hace adecuadas para "
+"aislar dónde se están produciendo errores. Sin embargo, las pruebas unitarias no son útiles para verificar "
+"que diferentes secciones de código funcionen juntas."
 
 #: ../../tests/test-types.md:147
 msgid ""
@@ -748,6 +942,11 @@ msgid ""
 " your unit tests to continue to pass, testing the original functionality "
 "of your code."
 msgstr ""
+"Las pruebas de integración y de extremo a extremo verifican que las diferentes partes del programa "
+"funcionen juntas, pero son menos adecuadas para aislar dónde se están produciendo errores. Por ejemplo, "
+"cuando reescribes tu código, es posible que tus pruebas de extremo a extremo se rompan. Pero si la "
+"reescritura no introdujo un nuevo comportamiento en tu código existente, entonces puedes confiar en tus "
+"pruebas unitarias para que sigan pasando, probando la funcionalidad original de tu código."
 
 #: ../../tests/test-types.md:152
 msgid ""
@@ -759,10 +958,14 @@ msgid ""
 " writing tests and how different types of tests can complement each "
 "other."
 msgstr ""
+"Es importante tener en cuenta que no necesitas preocuparte por los detalles que rodean los diferentes "
+"tipos de pruebas. Cuando comiences a trabajar en tu conjunto de pruebas, considera qué hace tu paquete y "
+"cómo tienes que probar las diferentes partes de tu paquete. Entender los diferentes tipos de pruebas "
+"te ayudará a pensar en cómo escribir pruebas y cómo los diferentes tipos se complementan entre sí."
 
 #: ../../tests/tests-ci.md:1
 msgid "Run tests with Continuous Integration"
-msgstr ""
+msgstr "Ejecuta pruebas con Integración Continua"
 
 #: ../../tests/tests-ci.md:3
 msgid ""
@@ -774,6 +977,11 @@ msgid ""
 "using CI you can specify tests to run both on various versions of Python "
 "and across different operating systems."
 msgstr ""
+"Ejecutar tu [conjunto de pruebas localmente](run-tests) es útil mientras desarrollas código y además"
+"ayuda mientras añades nuevas características o cambias el código. Sin embargo, también debes considerar la "
+"Integración Continua (CI) para ejecutar tus pruebas en línea. La CI te permite ejecutar todas tus pruebas en la nube. "
+"Mientras que solo puedes ejecutar pruebas localmente en un sistema operativo específico (el de tu ordenador), utilizando CI puedes "
+"hacer con que tus pruebas se ejecuten en diferentes versiones de Python y en diferentes sistemas operativos."
 
 #: ../../tests/tests-ci.md:5
 msgid ""
@@ -783,16 +991,19 @@ msgid ""
 "code continues to run as expected even as changes are made to the code "
 "base."
 msgstr ""
+"La CI también se puede activar cuando tu repositorio recibe pull requests y pushes. Esto significa que cada pull request "
+"que tú, tu equipo de mantenimiento o un contribuidor envíe, es probado automaticamente. Al final, las pruebas de CI aseguran que tu "
+"código sigue funcionando como se espera incluso mientras se realizan cambios."
 
 #: ../../tests/tests-ci.md:9
 msgid ""
 "Learn more about Continuous Integration and how it can be used, here. "
 "(add link)"
-msgstr ""
+msgstr "Aprende más sobre la Integración Continua y cómo se puede utilizar, aquí. (añadir enlace)"
 
 #: ../../tests/tests-ci.md:13
 msgid "CI & pull requests"
-msgstr ""
+msgstr "CI y pull requests"
 
 #: ../../tests/tests-ci.md:15
 msgid ""
@@ -803,26 +1014,32 @@ msgid ""
 " more without having to create development environments, run tests and "
 "build documentation locally."
 msgstr ""
+"La CI es invaluable si tienes colaboradores externos contribuyendo a tu proyecto. Puedes configurar la CI para que se ejecute en todos los "
+"pull requests enviados a tu repositorio, haciendo que tu repositorio sea más accesible a nuevos colaboradores. "
+"CI permite a los usuarios contribuir con código, correcciones de documentación y más sin tener que crear entornos de desarrollo, "
+"ejecutar pruebas y construir documentación localmente."
 
 #: ../../tests/tests-ci.md:22
 msgid "Example GitHub action that runs tests"
-msgstr ""
+msgstr "Ejemplo de acción de GitHub que ejecuta pruebas"
 
 #: ../../tests/tests-ci.md:24
 msgid ""
 "Below is an example GitHub action that runs tests using nox across both "
 "Windows, Mac and Linux and on Python versions 3.9-3.11."
 msgstr ""
+"Abajo hay un ejemplo de una acción de GitHub que ejecuta pruebas utilizando nox en Windows, Mac y Linux y en "
+"las versiones de Python 3.9-3.11."
 
 #: ../../tests/tests-ci.md:28
 msgid ""
 "To work properly, this file should be located in a root directory of your"
 " GitHub repository:"
-msgstr ""
+msgstr "Para funcionar correctamente, este archivo debe estar ubicado en el directorio raíz de tu repositorio de GitHub:"
 
 #: ../../tests/write-tests.md:1
 msgid "Write tests for your Python package"
-msgstr ""
+msgstr "Escribe pruebas para tu paquete de Python"
 
 #: ../../tests/write-tests.md:3
 msgid ""
@@ -832,10 +1049,14 @@ msgid ""
 "written with the intention of making sure a specific part of your code "
 "works as you expected it to."
 msgstr ""
+"Escribir código que pruebe tu código de paquete, también conocido como conjuntos de pruebas, es importante "
+"para ti como mantenedor, tus usuarios y los contribuidores de tu paquete. Los conjuntos de pruebas consisten en "
+"conjuntos de funciones, métodos y clases que se escriben con la intención de asegurarse de que una parte específica "
+"de tu código funcione como esperabas."
 
 #: ../../tests/write-tests.md:7
 msgid "Why write tests for your package?"
-msgstr ""
+msgstr "Porque debes escribir pruebas para tu paquete?"
 
 #: ../../tests/write-tests.md:9
 msgid ""
@@ -844,10 +1065,13 @@ msgid ""
 " code alterations from contributors won't breaking existing "
 "functionality."
 msgstr ""
+"Las pruebas actúan como una red de seguridad para los cambios de código. Te ayudan a detectar y corregir errores "
+"antes de que afecten a los usuarios. Las pruebas también infunden confianza en que las alteraciones de código de los "
+"contribuidores no romperán la funcionalidad existente."
 
 #: ../../tests/write-tests.md:13
 msgid "Writing tests for your Python package is important because:"
-msgstr ""
+msgstr "Escribir pruebas para tu paquete de Python es importante porque:"
 
 #: ../../tests/write-tests.md:15
 msgid ""
@@ -855,6 +1079,8 @@ msgid ""
 "new features to your package, tests can quickly tell you if you "
 "accidentally broke something that was working fine before."
 msgstr ""
+"**Detectar Errores:** Las pruebas son una red de seguridad. Cuando haces cambios o añades nuevas características a tu "
+"paquete, las pruebas pueden detectar rápidamente si algo que funcionaba antes se rompió accidentalmente."
 
 #: ../../tests/write-tests.md:16
 msgid ""
@@ -862,6 +1088,9 @@ msgid ""
 "check if your package is still working properly. Tests are like that "
 "magic button! They can run all those checks for you saving you time."
 msgstr ""
+"**Ahorrar Tiempo:** Imagina que tienes un botón mágico que puede comprobar automáticamente si tu paquete sigue "
+"funcionando correctamente. ¡Las pruebas son ese botón mágico! Pueden ejecutar todas esas comprobaciones por ti, "
+"ahorrándote un montón de tiempo."
 
 #: ../../tests/write-tests.md:17
 msgid ""
@@ -870,6 +1099,9 @@ msgid ""
 "explain how your package is supposed to work, making it easier for others"
 " to understand and contribute to your project."
 msgstr ""
+"**Colaboración más Sencilla:** Si estás trabajando con otros o tienes colaboradores externos, las pruebas "
+"ayudan a que todos puedan entender el contexto del paquere. Tus pruebas explican cómo se supone que debe funcionar tu paquete, "
+"facilitando que otros entiendan y contribuyan a tu proyecto."
 
 #: ../../tests/write-tests.md:18
 msgid ""
@@ -877,6 +1109,8 @@ msgid ""
 "code structure without changing its behavior. Tests empower you to make "
 "these changes as if you break something, test failures will let you know."
 msgstr ""
+"**Refactorización sin Miedo:** Refactorizar significa hacer mejoras en la estructura de tu código sin cambiar su comportamiento. "
+"Las pruebas te permiten hacer estos cambios, ya que si rompes algo, las pruebas que fallen te indicaran los problemas."
 
 #: ../../tests/write-tests.md:19
 msgid ""
@@ -885,6 +1119,8 @@ msgid ""
 "to contribute code to your package. They can look at your tests to "
 "understand how parts of your code functionality fits together."
 msgstr ""
+"**Documentación:** Las pruebas sirven como ejemplos técnicos de cómo usar tu paquete. Esto puede ser útil para un nuevo colaborador "
+"técnico que quiera contribuir código a tu paquete. Pueden mirar tus pruebas para entender mejor cómo encajan las funcionalidades de tu código."
 
 #: ../../tests/write-tests.md:20
 msgid ""
@@ -892,6 +1128,9 @@ msgid ""
 "that your code continues to behave as expected, even as you make changes "
 "over time. Thus you are helping your future self when writing tests."
 msgstr ""
+"**Facilidad de Mantenimiento a Largo Plazo:** A medida que tu paquete evoluciona, las pruebas aseguran que tu código "
+"continua comportándose como se espera, incluso a medida que realizas cambios durante un largo periodo de tiempo. Por lo tanto, es como "
+"ayudar a la versión futura de ti mismo."
 
 #: ../../tests/write-tests.md:21
 msgid ""
@@ -901,6 +1140,9 @@ msgid ""
 "your code base. This ensures that your software behaves the way you "
 "expect it to."
 msgstr ""
+"**Revisiones de pull requests más sencillas:** Al ejecutar tus pruebas en un marco de CI como GitHub Actions, cada vez que tú o un colaborador "
+"hace un cambio en tu código, puedes detectar problemas y cambios de comportamiento en tu código. Esto asegura que tu software continua "
+"comportándose de la manera que esperas."
 
 #: ../../tests/write-tests.md:23
 msgid "Tests for user edge cases"
@@ -915,6 +1157,11 @@ msgid ""
 "`array`? Does your code gracefully handle this situation, providing clear"
 " feedback, or does it leave users frustrated by an unexplained failure?"
 msgstr ""
+"Edge cases (casos limite) son formas inesperadas o \"atípicas\" en las que algunos usuarios pueden usar tu paquete. "
+"Las pruebas te permiten abordar varios edge cases que podrían afectar la funcionalidad de tu paquete. Por ejemplo, ¿qué ocurre si una función "
+"espera un `dataframe` de pandas pero un usuario proporciona un `array` de numpy? ¿Tu código maneja esta situación de forma elegante, "
+"proporcionando un mensaje de error claro, o deja a los usuarios frustrados por un fallo inexplicado?"
+
 
 #: ../../tests/write-tests.md:33
 msgid ""
@@ -922,6 +1169,8 @@ msgid ""
 "lesson](https://swcarpentry.github.io/python-novice-"
 "inflammation/10-defensive.html)"
 msgstr ""
+"Para una buena introducción a las pruebas, consulta [esta lección de Software Carpentry](https://swcarpentry.github.io/python-novice-"
+"inflammation/10-defensive.html)"
 
 #: ../../tests/write-tests.md:41
 msgid ""
@@ -932,42 +1181,45 @@ msgid ""
 "people with the right puzzle pieces that work together can be compared to"
 " writing tests for your Python package."
 msgstr ""
+"Imagina que estás resolviendo un rompecabezas donde cada pieza representa una función, método, clase o atributo en tu paquete de Python "
+"que deseas que otras personas puedan usar. ¿Darias a alguien un rompecabezas al que falten piezas o en el que las piezas que no encajan? "
+"Dar un rompecabezas con las piezas correctas y que conecten entre si se puede comparar con escribir pruebas para tu paquete de Python."
 
 #: ../../tests/write-tests.md:44
 msgid "Test examples"
-msgstr ""
+msgstr "Ejemplos de pruebas"
 
 #: ../../tests/write-tests.md:47
 msgid ""
 "Let’s say you have a Python function that adds two numbers a and b "
 "together."
-msgstr ""
+msgstr "Imagina que tienes una función de Python que suma dos números a y b."
 
 #: ../../tests/write-tests.md:54
 msgid ""
 "A test to ensure that function runs as you might expect when provided "
 "with different numbers might look like this:"
-msgstr ""
+msgstr "Una prueba para asegurarte de que la función se ejecute como esperas cuando se le proporcionan diferentes números podría escribirse así:"
 
 #: ../../tests/write-tests.md:72
 msgid "🧩🐍"
-msgstr ""
+msgstr "🧩🐍"
 
 #: ../../tests/write-tests.md:74
 msgid "How do I know what type of tests to write?"
-msgstr ""
+msgstr "¿Cómo sé qué tipo de pruebas escribir?"
 
 #: ../../tests/write-tests.md:77
 msgid ""
 "This section has been adapted from [a presentation by Nick "
 "Murphy](https://zenodo.org/record/8185113)."
-msgstr ""
+msgstr "Esta sección ha sido adaptada de [una presentación de Nick Murphy](https://zenodo.org/record/8185113)."
 
 #: ../../tests/write-tests.md:80
 msgid ""
 "At this point, you may be wondering - what should you be testing in your "
 "package? Below are a few examples:"
-msgstr ""
+msgstr "En este punto puede que te estés preguntando - ¿qué deberías probar en tu paquete? A continuación hay algunos ejemplos:"
 
 #: ../../tests/write-tests.md:82
 msgid ""
@@ -976,21 +1228,29 @@ msgid ""
 " to add two numbers, test that the outcome value of adding those two "
 "numbers is correct."
 msgstr ""
+"**Prueba algunos casos típicos:** Prueba que el paquete funcione como esperas cuando los usuarios lo usan. Por ejemplo, "
+"si tu paquete debe sumar dos números, prueba que el valor resultante de sumar esos dos números sea correcto."
 
 #: ../../tests/write-tests.md:84
 msgid ""
 "**Test special cases:** Sometimes there are special or outlier cases. For"
 " instance, if a function performs a specific calculation that may become "
 "problematic closer to the value = 0, test it with the input of both 0 and"
+" a regular number."
 msgstr ""
+"**Prueba casos especiales:** A veces hay casos especiales o atípicos. Por ejemplo, si una función realiza un cálculo específico "
+"que puede ser problemático cerca del valor = 0, pruébalo con la entrada de 0 y un valor normal."
 
 #: ../../tests/write-tests.md:86
 msgid ""
 "**Test at and near the expected boundaries:** If a function requires a "
 "value that is greater than or equal to 1, make sure that the function "
-"still works with both the values 1 and less than one and 1.001 as well "
-"(something close to the constraint value).."
+"still works with both the values 1 and less than one, as well as 1.001 "
+"(something close to the constraint value)."
 msgstr ""
+"**Prueba cerca de y en los límites esperados:** Si una función requiere un valor mayor o igual a 1, asegúrate de que la función "
+"se comporta correctamente con los valores 1 y menos de uno y con 1.001 (algo cercano al valor de la restricción)."
+
 
 #: ../../tests/write-tests.md:88
 msgid ""
@@ -1000,3 +1260,6 @@ msgid ""
 "the user can easily understand why if failed (provides a useful error "
 "message)."
 msgstr ""
+"**Prueba que el código falle correctamente:** Si una función requiere un valor mayor o igual a 1, entonces prueba con 0.999. "
+"Asegúrate de que la función falle de forma elegante cuando se le dan valores inesperados y que el usuario pueda entender fácilmente "
+"por qué falló (proporciona un mensaje de error útil)."
