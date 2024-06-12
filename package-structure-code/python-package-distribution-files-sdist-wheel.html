@@ -42,7 +42,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=a746c00c" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=87e54e7c" />
     <link rel="stylesheet" type="text/css" href="../_static/pyos.css?v=ba8f538e" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
@@ -55,7 +55,7 @@
     <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
     <script src="../_static/copybutton.js?v=f281be69"></script>
-    <script src="../_static/design-tabs.js?v=36754332"></script>
+    <script src="../_static/design-tabs.js?v=f930bc37"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'package-structure-code/python-package-distribution-files-sdist-wheel';</script>
     <script src="../_static/matomo.js?v=918da087"></script>
     <link rel="canonical" href="https://www.pyopensci.org/python-package-guide/package-structure-code/python-package-distribution-files-sdist-wheel.html" />
@@ -597,14 +597,14 @@ represent on your PyPI landing page. These classifiers also allow users to sort 
 </figcaption>
 </figure>
 <figure class="align-default" id="build-workflow">
-<a class="reference internal image-reference" href="../_images/python-package-development-process.png"><img alt="Graphic showing the high level packaging workflow. On the left you see a graphic with code, metadata and tests in it. those items all go into your package. Documentation and data are below that box because they aren't normally published in your packaging wheel distribution. an arrow to the right takes you to a build distribution files box. that box leads you to either publishing to testpypi or the real pypi. from pypi you can then connect to conda-forge for an automated build that sends distributions from pypi to conda-forge." src="../_images/python-package-development-process.png" style="width: 700px;" />
+<a class="reference internal image-reference" href="../_images/python-package-development-process.png"><img alt="Graphic showing the high level packaging workflow. On the left you see a graphic with code, metadata and tests in it. those items all go into your package. Documentation and data are below that box because they aren't normally published in your packaging wheel distribution. an arrow to the right takes you to a build distribution files box. that box leads you to either publishing to TestPyPI or the real PyPI. from PyPI you can then connect to conda-forge for an automated build that sends distributions from PyPI to conda-forge." src="../_images/python-package-development-process.png" style="width: 700px;" />
 </a>
 <figcaption>
 <p><span class="caption-text">You need to build your Python package in order to publish it to PyPI (or Conda). The build process organizes your code and metadata into a distribution format that can be uploaded to PyPI and subsequently downloaded and installed by users. NOTE: you need to publish a sdist to PyPI in order for conda-forge to properly build your package automatically.</span><a class="headerlink" href="#build-workflow" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 <figure class="align-default" id="id2">
-<a class="reference internal image-reference" href="../_images/pypi-metadata-keywords-license.png"><img alt="This screenshot shows the metadata on pypi for the xclim package. on it you can see the name of the license, the author and maintainer names keywords associated with the package and the base python version it requires which is 3.8." src="../_images/pypi-metadata-keywords-license.png" style="width: 400px;" />
+<a class="reference internal image-reference" href="../_images/pypi-metadata-keywords-license.png"><img alt="This screenshot shows the metadata on PyPI for the xclim package. on it you can see the name of the license, the author and maintainer names keywords associated with the package and the base python version it requires which is 3.8." src="../_images/pypi-metadata-keywords-license.png" style="width: 400px;" />
 </a>
 <figcaption>
 <p><span class="caption-text">PyPI screenshot showing metadata for the xclim package.</span><a class="headerlink" href="#id2" title="Link to this image">#</a></p>
@@ -658,7 +658,7 @@ or is more complex in its build, the two distributions will be very different.</
 <p><strong>Source files</strong> are the unbuilt files needed to build your
 package. These are the “raw / as-is” files that you store on GitHub or whatever
 platform you use to manage your code.</p>
-<p><strong>S</strong>ource <strong>Dist</strong>ributions are referred to as sdist. As the name implies, a SDIST contains the source code; it has not been
+<p>Source Distributions (<strong>S</strong> + <strong>Dist</strong>) are referred to as sdist. As the name implies, a SDIST contains the source code; it has not been
 built or compiled in any way. Thus, when a user installs your source
 distribution using pip, pip needs to run a build step first. For this reason, you could define a source distribution as a compressed archive that contains everything required to build a wheel (except for project dependencies) without network access.</p>
 <p>Sdist is normally stored as a <code class="docutils literal notranslate"><span class="pre">.tar.gz</span></code> archive (often called a “tarball”). Thus, when a user installs your source distribution using pip, pip needs to run a build step first.</p>

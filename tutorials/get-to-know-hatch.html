@@ -42,7 +42,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=a746c00c" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=87e54e7c" />
     <link rel="stylesheet" type="text/css" href="../_static/pyos.css?v=ba8f538e" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
@@ -55,13 +55,13 @@
     <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
     <script src="../_static/copybutton.js?v=f281be69"></script>
-    <script src="../_static/design-tabs.js?v=36754332"></script>
+    <script src="../_static/design-tabs.js?v=f930bc37"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'tutorials/get-to-know-hatch';</script>
     <script src="../_static/matomo.js?v=918da087"></script>
     <link rel="canonical" href="https://www.pyopensci.org/python-package-guide/tutorials/get-to-know-hatch.html" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Using Hatch to Migrate setup.py to a pyproject.toml" href="setup-py-to-pyproject-toml.html" />
+    <link rel="next" title="Make your Python code installable" href="installable-code.html" />
     <link rel="prev" title="Python packaging 101" href="intro.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
@@ -444,7 +444,6 @@ document.write(`
   <div class="bd-toc-item navbar-nav"><p aria-level="2" class="caption" role="heading"><span class="caption-text">Python Packaging Tutorial Setup</span></p>
 <ul class="current nav bd-sidenav">
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">Get to know Hatch</a></li>
-<li class="toctree-l1"><a class="reference internal" href="setup-py-to-pyproject-toml.html">Migrate setup.py to a pyproject.toml using Hatch</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Create and publish a Python Package</span></p>
 <ul class="nav bd-sidenav">
@@ -458,6 +457,10 @@ document.write(`
 <li class="toctree-l1"><a class="reference internal" href="add-readme.html">Add README file</a></li>
 <li class="toctree-l1"><a class="reference internal" href="add-license-coc.html">Add a license &amp; code of conduct</a></li>
 <li class="toctree-l1"><a class="reference internal" href="pyproject-toml.html">Update metadata in pyproject.toml</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Hatch for Existing Packages</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="setup-py-to-pyproject-toml.html">Migrate setup.py to a pyproject.toml using Hatch</a></li>
 </ul>
 </div>
 </nav></div>
@@ -551,6 +554,11 @@ it might be easier to look at it and update it in a text editor if you are using
 <p>To open the config file in your file browser, run the following command in your shell:</p>
 <p><code class="docutils literal notranslate"><span class="pre">hatch</span> <span class="pre">config</span> <span class="pre">explore</span></code></p>
 <p>This will open up a directory window that will allow you to double click on the file and open it in your favorite text editor.</p>
+<p>You can also retrieve the location of the Hatch config file by running the following command in your shell:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>hatch<span class="w"> </span>config<span class="w"> </span>find
+<span class="c1"># hatch config --help will show you all the options for config.</span>
+</pre></div>
+</div>
 </section>
 <section id="step-2-update-your-email-and-name">
 <h3>Step 2 - update your email and name<a class="headerlink" href="#step-2-update-your-email-and-name" title="Link to this heading">#</a></h3>
@@ -659,11 +667,11 @@ and maintaining your Python package easier.</p>
       </div>
     </a>
     <a class="right-next"
-       href="setup-py-to-pyproject-toml.html"
+       href="installable-code.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Using Hatch to Migrate setup.py to a pyproject.toml</p>
+        <p class="prev-next-title">Make your Python code installable</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>

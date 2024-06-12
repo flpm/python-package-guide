@@ -42,7 +42,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=a746c00c" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=87e54e7c" />
     <link rel="stylesheet" type="text/css" href="../_static/pyos.css?v=ba8f538e" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
@@ -55,7 +55,7 @@
     <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
     <script src="../_static/copybutton.js?v=f281be69"></script>
-    <script src="../_static/design-tabs.js?v=36754332"></script>
+    <script src="../_static/design-tabs.js?v=f930bc37"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'tutorials/intro';</script>
     <script src="../_static/matomo.js?v=918da087"></script>
     <link rel="canonical" href="https://www.pyopensci.org/python-package-guide/tutorials/intro.html" />
@@ -444,7 +444,6 @@ document.write(`
   <div class="bd-toc-item navbar-nav"><p aria-level="2" class="caption" role="heading"><span class="caption-text">Python Packaging Tutorial Setup</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="get-to-know-hatch.html">Get to know Hatch</a></li>
-<li class="toctree-l1"><a class="reference internal" href="setup-py-to-pyproject-toml.html">Migrate setup.py to a pyproject.toml using Hatch</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Create and publish a Python Package</span></p>
 <ul class="current nav bd-sidenav">
@@ -458,6 +457,10 @@ document.write(`
 <li class="toctree-l1"><a class="reference internal" href="add-readme.html">Add README file</a></li>
 <li class="toctree-l1"><a class="reference internal" href="add-license-coc.html">Add a license &amp; code of conduct</a></li>
 <li class="toctree-l1"><a class="reference internal" href="pyproject-toml.html">Update metadata in pyproject.toml</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Hatch for Existing Packages</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="setup-py-to-pyproject-toml.html">Migrate setup.py to a pyproject.toml using Hatch</a></li>
 </ul>
 </div>
 </nav></div>
@@ -535,6 +538,8 @@ understanding the steps involved in creating a Python package.</p>
 <li><p>In this series you will learn about the core elements that you need to publish your package to the <a class="reference external" href="https://pypi.org/">Python Package Index (PyPI)</a>.</p></li>
 <li><p>In the second series, you will learn about infrastructure and documentation needed to support package maintenance.</p></li>
 </ul>
+<div class="toctree-wrapper compound">
+</div>
 <div class="toctree-wrapper compound">
 </div>
 <div class="toctree-wrapper compound">
@@ -785,7 +790,7 @@ publish it in a repository such as <strong>PyPI</strong> or <strong>conda-forge<
 <p>Then you can create a conda-forge recipe using the <a class="reference external" href="https://github.com/conda/grayskull">Grayskull</a> tool. You can then submit this recipe to conda-forge.</p>
 <p><a class="reference internal" href="publish-conda-forge.html"><span class="std std-doc">You will learn more about the conda-forge publication process here.</span></a></p>
 <figure class="align-default" id="publish-package-pypi-conda-overview">
-<a class="reference internal image-reference" href="../_images/publish-package-pypi-conda.png"><img alt="Graphic showing the high level packaging workflow. On the left you see a graphic with code, metadata and tests in it. Those items all go into your package. Documentation and data are below that box because they aren't normally published in your packaging wheel distribution. an arrow to the right takes you to a build distribution files box. that box leads you to either publishing to testPyPI or the real PyPI. From PyPI you can then connect to conda-forge for an automated build that sends distributions from PyPI to conda-forge." src="../_images/publish-package-pypi-conda.png" style="width: 700px;" />
+<a class="reference internal image-reference" href="../_images/publish-package-pypi-conda.png"><img alt="Graphic showing the high level packaging workflow. On the left you see a graphic with code, metadata and tests in it. Those items all go into your package. Documentation and data are below that box because they aren't normally published in your packaging wheel distribution. an arrow to the right takes you to a build distribution files box. that box leads you to either publishing to TestPyPI or the real PyPI. From PyPI you can then connect to conda-forge for an automated build that sends distributions from PyPI to conda-forge." src="../_images/publish-package-pypi-conda.png" style="width: 700px;" />
 </a>
 <figcaption>
 <p><span class="caption-text">In the image above, you can see the steps associated with publishing

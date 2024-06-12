@@ -42,7 +42,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=a746c00c" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=87e54e7c" />
     <link rel="stylesheet" type="text/css" href="../_static/pyos.css?v=ba8f538e" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
@@ -55,7 +55,7 @@
     <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
     <script src="../_static/copybutton.js?v=f281be69"></script>
-    <script src="../_static/design-tabs.js?v=36754332"></script>
+    <script src="../_static/design-tabs.js?v=f930bc37"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'package-structure-code/python-package-build-tools';</script>
     <script src="../_static/matomo.js?v=918da087"></script>
     <link rel="canonical" href="https://www.pyopensci.org/python-package-guide/package-structure-code/python-package-build-tools.html" />
@@ -928,7 +928,7 @@ building a basic package to use in a local workflow that doesn’t require any a
 </tr>
 </tbody>
 </table>
-<p>NOTE: <em>If you are using the most current version of pip, it supports both a symlink approach <code class="docutils literal notranslate"><span class="pre">flit</span> <span class="pre">install</span> <span class="pre">-s</span></code> and <code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">-e</span> <span class="pre">.</span></code></em></p>
+<p>NOTE: <em>If you are using the most current version of pip, it supports both a symlink approach <code class="docutils literal notranslate"><span class="pre">flit</span> <span class="pre">install</span> <span class="pre">-s</span></code> and <code class="docutils literal notranslate"><span class="pre">python</span> <span class="pre">-m</span> <span class="pre">pip</span> <span class="pre">install</span> <span class="pre">-e</span> <span class="pre">.</span></code></em></p>
 <div class="admonition-learn-more-about-flit admonition">
 <p class="admonition-title">Learn more about flit</p>
 <ul class="simple">
@@ -1003,7 +1003,7 @@ as building your documentation locally. This means that you could potentially dr
 </tr>
 <tr class="row-odd"><td><p>Install your package in editable mode</p></td>
 <td><p>✅</p></td>
-<td><p>Hatch will install your package into any of its environments by default in editable mode. You can install your package in editable mode manually using <code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">-e</span> <span class="pre">.</span></code> Hatch mentions <a class="reference external" href="https://hatch.pypa.io/latest/config/build/#dev-mode">editable installs</a> but refers to pip in its documentation.</p></td>
+<td><p>Hatch will install your package into any of its environments by default in editable mode. You can install your package in editable mode manually using <code class="docutils literal notranslate"><span class="pre">python</span> <span class="pre">-m</span> <span class="pre">pip</span> <span class="pre">install</span> <span class="pre">-e</span> <span class="pre">.</span></code> Hatch mentions <a class="reference external" href="https://hatch.pypa.io/latest/config/build/#dev-mode">editable installs</a> but refers to pip in its documentation.</p></td>
 </tr>
 <tr class="row-even"><td><p>Build your sdist and wheel distributions</p></td>
 <td><p>✅</p></td>
