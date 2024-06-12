@@ -31,6 +31,7 @@ TRANSLATION_TEMPLATE_PARAMETERS = ["-b", "gettext"]
 # Sphinx-autobuild ignore and include parameters
 AUTOBUILD_IGNORE = [
     "_build",
+    ".nox",
     "build_assets",
     "tmp",
 ]
@@ -63,6 +64,9 @@ def docs_test(session):
     # When building the guide with testing parameters, also build the translations with those parameters
     session.notify("translation-build", TEST_PARAMETERS)
 
+# This session will build the guide in English, to use it with a translation during development,
+# pass the language as a parameter to sphinx-build via nox with (example for Spanish):
+# nox -s docs-live -- -D language=es
 @nox.session(name="docs-live")
 def docs_live(session):
     """Build and launch a local copy of the guide."""
@@ -70,9 +74,29 @@ def docs_live(session):
     cmd = [SPHINX_AUTO_BUILD, *BUILD_PARAMETERS, SOURCE_DIR, OUTPUT_DIR, *session.posargs]
     for folder in AUTOBUILD_IGNORE:
         cmd.extend(["--ignore", f"*/{folder}/*"])
-    # for folder in AUTOBUILD_INCLUDE:
+    # for folder in AUTOBUILD_INCLUDE: # This was commented in the original nox file
     #     cmd.extend(["--watch", folder])
     session.run(*cmd)
+
+@nox.session(name="docs-live-lang")
+def docs_live_lang(session):
+    """A convenience session for beginner contributors to use docs-live with a language translation."""
+    if not session.posargs:
+        session.error(
+            "Please provide a language using:\n\n      "
+            "nox -s docs-live-lang -- LANG\n\n     "
+            f" where LANG is one of: {LANGUAGES}"
+        )
+    lang = session.posargs[0]
+    if lang in LANGUAGES:
+        session.posargs.pop(0)
+        session.notify("docs-live", ('-D', f"language={lang}", *session.posargs))
+    else:
+        session.error(
+            f"[{lang}] locale is not available. Try using:\n\n      "
+            "nox -s docs-live-lang -- LANG\n\n      "
+            f"where LANG is one of: {LANGUAGES}"
+        )
 
 @nox.session(name="docs-clean")
 def clean_dir(session):
