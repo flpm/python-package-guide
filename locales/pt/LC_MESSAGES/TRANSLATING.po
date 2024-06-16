@@ -1,0 +1,402 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2024, pyOpenSci
+# This file is distributed under the same license as the pyOpenSci Python
+# Package Guide package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: pyOpenSci Python Package Guide \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-06-15 14:07-0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: pt\n"
+"Language-Team: pt <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.15.0\n"
+
+#: ../../TRANSLATING.md:4
+msgid "Translation Guide for the Python Packaging Guide"
+msgstr ""
+
+#: ../../TRANSLATING.md:6
+msgid ""
+"This guide will help you get started contributing to the translation of "
+"the Python Packaging Guide."
+msgstr ""
+
+#: ../../TRANSLATING.md:8
+msgid ""
+"The process of contributing to the translation of the guide is similar to"
+" the process of contributing to the guide itself, except that instead of "
+"working on the guide source files directly, you will be working on the "
+"translation files."
+msgstr ""
+
+#: ../../TRANSLATING.md:10
+msgid "Overview of the translation process"
+msgstr ""
+
+#: ../../TRANSLATING.md:12
+msgid ""
+"The process of preparing software for translation is called "
+"internationalization, or i18n for short. Internationalization makes sure "
+"that the software is designed in a way that makes it easy to translate "
+"into different languages without having to modify the source code, or in "
+"our case, the source files of the guide."
+msgstr ""
+
+#: ../../TRANSLATING.md:14
+msgid ""
+"Sphinx, the documentation engine we use to build the Python Package "
+"Guide, has built-in support for internationalization and localization, so"
+" the process is very straightforward."
+msgstr ""
+
+#: ../../TRANSLATING.md:16
+msgid ""
+"The process of actually translating the software into different languages"
+" is called localization, or l10n for short. That is the step you will be "
+"helping with."
+msgstr ""
+
+#: ../../TRANSLATING.md:18
+msgid ""
+"Here is an overview of the localization workflow for the Python Packaging"
+" Guide:"
+msgstr ""
+
+#: ../../TRANSLATING.md:20
+msgid ""
+"The guide is originally written in English and stored in a set of "
+"MarkDown files."
+msgstr ""
+
+#: ../../TRANSLATING.md:21
+msgid ""
+"The source files are processed by Sphinx to generate a set of translation"
+" files stored in the `./locale` folder."
+msgstr ""
+
+#: ../../TRANSLATING.md:22
+msgid "Contributors (like you!) translated these files into different languages."
+msgstr ""
+
+#: ../../TRANSLATING.md:23
+msgid ""
+"When the guide is build, Sphinx creates a version of the guide in the "
+"original language (English) and the translated versions for the languages"
+" defined in the configuration."
+msgstr ""
+
+#: ../../TRANSLATING.md:26
+msgid ""
+"You don't need to understand the technical details to contribute! But if "
+"you are interested in learning how Sphinx handles internationalization "
+"and localization, you can find more information [here](https://www"
+".sphinx-doc.org/en/master/usage/advanced/intl.html)."
+msgstr ""
+
+#: ../../TRANSLATING.md:29
+msgid "Setting up your local environment"
+msgstr ""
+
+#: ../../TRANSLATING.md:31
+msgid "Before you start, you need to set up your local work environment."
+msgstr ""
+
+#: ../../TRANSLATING.md:33
+msgid ""
+"First, fork the guide repository into your personal GitHub account. Then,"
+" clone the repository to your local computer."
+msgstr ""
+
+#: ../../TRANSLATING.md:35
+msgid ""
+"Once you have the repository cloned to your local computer, follow these "
+"steps to set up a virtual environment for working on translations:"
+msgstr ""
+
+#: ../../TRANSLATING.md:44
+msgid ""
+"This will create a virtual environment in the `.venv` directory, activate"
+" this virtual environment, and install the guide's development "
+"dependencies required to build the guide and its translations locally."
+msgstr ""
+
+#: ../../TRANSLATING.md:47
+msgid "Starting a new language translation"
+msgstr ""
+
+#: ../../TRANSLATING.md:49
+msgid ""
+"If you are going to work on an existing translation, you can skip this "
+"step and go directly to the next section."
+msgstr ""
+
+#: ../../TRANSLATING.md:51
+msgid ""
+"Before starting the translation of a new language, you need to add the "
+"new language to the `LANGUAGES` list in the `noxfile.py` configuration "
+"file. Nox is the tool we use to manage the building of the guide and its "
+"translations."
+msgstr ""
+
+#: ../../TRANSLATING.md:53
+msgid ""
+"Inside `noxfile.py`, find the `LANGUAGES` list and add the two-letter "
+"code corresponding to the new language."
+msgstr ""
+
+#: ../../TRANSLATING.md:55
+msgid ""
+"For example, if you want to start the translation of the guide into "
+"French, you would add `'fr'`:"
+msgstr ""
+
+#: ../../TRANSLATING.md:66
+msgid ""
+"You can find a list of the two-letter ISO language codes "
+"[here](https://en.wikipedia.org/wiki/List_of_ISO_639_language_codes)."
+msgstr ""
+
+#: ../../TRANSLATING.md:69
+msgid "Preparing the translation files"
+msgstr ""
+
+#: ../../TRANSLATING.md:71
+msgid ""
+"The translation files contain the original English text and a space for "
+"you to enter the translated text. Before starting to translate, you need "
+"to make sure the translation files are up to date with the latest changes"
+" to the guide."
+msgstr ""
+
+#: ../../TRANSLATING.md:73
+msgid "You can do this by running the following command:"
+msgstr ""
+
+#: ../../TRANSLATING.md:79
+msgid ""
+"This command will create the translation files if you are just starting "
+"the translation of a new language, or update the existing translation "
+"files for the existing translations (defined in the `LANGUAGES` list in "
+"`noxfile.py`)."
+msgstr ""
+
+#: ../../TRANSLATING.md:81
+msgid ""
+"The translation files are text files with the `.po` extension, and "
+"contain the original English text and a space for you to enter the "
+"translated text. They are stored in the `locale` subdirectory "
+"corresponding to each language. For example, the translation files for "
+"Spanish are stored in the `locale/es/LC_MESSAGES` directory."
+msgstr ""
+
+#: ../../TRANSLATING.md:83
+msgid ""
+"Because the translation files map the original English text to translated"
+" text, they are sometimes referred to as \"catalog\" files or \"portable "
+"object\" files."
+msgstr ""
+
+#: ../../TRANSLATING.md:86
+msgid ""
+"You don't need to know the details about the PO format, but you can find "
+"more information in the [GNU gettext "
+"documentation](https://www.gnu.org/software/gettext/manual/html_node/PO-"
+"Files.html)."
+msgstr ""
+
+#: ../../TRANSLATING.md:89
+msgid "Working on a translation"
+msgstr ""
+
+#: ../../TRANSLATING.md:91
+msgid "Okay, you are all set up and ready to start working on a translation!"
+msgstr ""
+
+#: ../../TRANSLATING.md:93
+msgid ""
+"Go to the `locale` subdirectory for the language you are working on (for "
+"example, `./locale/es/LC_MESSAGES/` for the Spanish translation)."
+msgstr ""
+
+#: ../../TRANSLATING.md:95
+msgid ""
+"You will find a set of `.po` files corresponding to the different "
+"sections of the guide:"
+msgstr ""
+
+#: ../../TRANSLATING.md:111
+msgid ""
+"You may also see some `.mo` files in the same directory. These are "
+"compiled versions of the `.po` files create by Sphinx during the build "
+"process and used to generate the translated versions of the guide. These "
+"files are not meant to be edited directly and are not be stored in the "
+"repository."
+msgstr ""
+
+#: ../../TRANSLATING.md:114
+msgid ""
+"If you are working on a new translation, choose one of the `.po` files to"
+" start with. If you are working on an existing translation, you can start"
+" with the `.po` files that need the most work."
+msgstr ""
+
+#: ../../TRANSLATING.md:116
+msgid ""
+"To see statistics about the translation files, you can run the `sphinx-"
+"intl stat` command. It will list the number of translated, fuzzy, and "
+"untranslated strings in each `.po` file. For example, to see the "
+"statistics for the Spanish translation, you would run:"
+msgstr ""
+
+#: ../../TRANSLATING.md:130
+msgid ""
+"Translated strings are strings that have been translated into the target "
+"language."
+msgstr ""
+
+#: ../../TRANSLATING.md:131
+msgid ""
+"Fuzzy strings are strings that have been translated but need to be "
+"reviewed because the original English string in the guide changed."
+msgstr ""
+
+#: ../../TRANSLATING.md:132
+msgid "Untranslated strings are strings that have not been translated yet."
+msgstr ""
+
+#: ../../TRANSLATING.md:135
+msgid ""
+"When Sphinx is building the guide in another language, it will look into "
+"the corresponding directory in `./locales/` for the translated strings "
+"and use them if they are available, or default to the original English "
+"strings if they are not."
+msgstr ""
+
+#: ../../TRANSLATING.md:138
+msgid "Editing the translation files"
+msgstr ""
+
+#: ../../TRANSLATING.md:140
+msgid ""
+"You can use any text editor to edit the `.po` files directly, but if you "
+"prefer, you can use a tool like [Poedit](https://poedit.net/) to help you"
+" manage the translation process."
+msgstr ""
+
+#: ../../TRANSLATING.md:142
+msgid ""
+"Depending on your text editor of choice, you may be able to install a "
+"plugin or extension that will make it easier to work with `.po` files. "
+"For example, if you are using Visual Studio Code, you can install the ADD"
+" LINK AND DETAILS HERE extension."
+msgstr ""
+
+#: ../../TRANSLATING.md:144
+msgid ""
+"If you are working on Visual Studio Code and have access to Github "
+"Copilot, you can use the `po` language mode to get suggestions for "
+"translations, which can help speed up the translation process "
+"significantly. You will still have to review and edit the suggestions to "
+"make sure they are accurate and appropriate for the context."
+msgstr ""
+
+#: ../../TRANSLATING.md:146
+msgid "Building the translated documentation locally on your computer"
+msgstr ""
+
+#: ../../TRANSLATING.md:148
+msgid ""
+"Once you have made changes to the translation files, you can build the "
+"translated versions of the guide locally on your computer to see how the "
+"changes look. In order to do this, you will need to run the following "
+"command:"
+msgstr ""
+
+#: ../../TRANSLATING.md:154
+msgid ""
+"This will build the translated versions of the guide for all languages "
+"defined in the `LANGUAGES` list in `noxfile.py`. You can find the output "
+"in the `_build/html` directory. The translations will be in "
+"subdirectories named after the language code (e.g., `es`, `fr`, etc.)."
+msgstr ""
+
+#: ../../TRANSLATING.md:156
+msgid ""
+"You can also build a live version of the documentation that updates when "
+"you update local files by running the following command, if you want to "
+"build the translation for Spanish:"
+msgstr ""
+
+#: ../../TRANSLATING.md:162
+msgid ""
+"Notice that in this case you need to pass the language code of the "
+"translation you want to build. And you need to remember to use `--` to "
+"indicate that the following arguments are meant to the commands inside "
+"the session, not to `nox`."
+msgstr ""
+
+#: ../../TRANSLATING.md:164
+msgid ""
+"When you build the documentation like this, you can access a live version"
+" of the translated guide at a localhost address, generally "
+"http://localhost:8000. Sphinx will rebuild the documentation whenever you"
+" make changes to the translation files, so you can see the changes in "
+"real time on your browser."
+msgstr ""
+
+#: ../../TRANSLATING.md:167
+msgid "Submitting a PR for your translation"
+msgstr ""
+
+#: ../../TRANSLATING.md:169
+msgid ""
+"Before you submit a PR for your translation, you should make sure that "
+"the translated version of the guide build correctly and looks good in the"
+" browser:"
+msgstr ""
+
+#: ../../TRANSLATING.md:171
+msgid ""
+"Build the guide with additional warnings enabled using the following "
+"command:"
+msgstr ""
+
+#: ../../TRANSLATING.md:177
+msgid ""
+"Make sure there are no warnings or errors in the output. If there are, "
+"you will need to fix them before submitting the PR."
+msgstr ""
+
+#: ../../TRANSLATING.md:178
+msgid ""
+"Make sure the translated version of the guide looks good in the browser. "
+"Check that all the text is translated correctly and that the formatting "
+"looks good. You can do this by opening the "
+"`_build/html/<lang>/index.html` file, where `<lang>` is the language you "
+"have been working on, in your browser and navigating through the guide to"
+" find the sections you have translated."
+msgstr ""
+
+#: ../../TRANSLATING.md:180
+msgid ""
+"Once you have verified that the translated version of the guide looks "
+"good and builds correctly, you can submit a PR to the main repository "
+"with your translation."
+msgstr ""
+
+#: ../../TRANSLATING.md:182
+msgid "The review process for translations"
+msgstr ""
+
+#: ../../TRANSLATING.md:184
+msgid "Frequently Asked Questions (FAQ)"
+msgstr ""
