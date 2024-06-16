@@ -26,9 +26,8 @@ dependencies = [
 
 [project.optional-dependencies]
 dev = [
-    # for checking style rules
+    "nox",
     "vale",
-    # for internationalization
     "sphinx-intl",
 ]
 
