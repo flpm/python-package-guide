@@ -7,19 +7,19 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
-<meta property="og:title" content="Add a README file to your Python package" />
+<meta property="og:title" content="Command Line Reference Guide" />
 <meta property="og:type" content="website" />
-<meta property="og:url" content="https://www.pyopensci.org/python-package-guide/tutorials/add-readme.html" />
+<meta property="og:url" content="https://www.pyopensci.org/python-package-guide/tutorials/command-line-reference.html" />
 <meta property="og:site_name" content="pyOpenSci Python Package Guide" />
-<meta property="og:description" content="In the previous lessons you learned: What a Python package is, How to make your code installable, How to publish your package to (test) PyPI, How to publish your package to conda-forge. What is a R..." />
+<meta property="og:description" content="Environment Setup:,, Description, Syntax,,, Set PowerShell execution policy (Windows), Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser,, Install Scoop (Windows), Invoke-RestMet..." />
 <meta property="og:image:width" content="1146" />
 <meta property="og:image:height" content="600" />
-<meta property="og:image" content="https://www.pyopensci.org/python-package-guide/_images/social_previews/summary_tutorials_add-readme_cb98e8e2.png" />
-<meta property="og:image:alt" content="In the previous lessons you learned: What a Python package is, How to make your code installable, How to publish your package to (test) PyPI, How to publish..." />
-<meta name="description" content="In the previous lessons you learned: What a Python package is, How to make your code installable, How to publish your package to (test) PyPI, How to publish your package to conda-forge. What is a R..." />
+<meta property="og:image" content="https://www.pyopensci.org/python-package-guide/_images/social_previews/summary_tutorials_command-line-reference_a51f2601.png" />
+<meta property="og:image:alt" content="Environment Setup:,, Description, Syntax,,, Set PowerShell execution policy (Windows), Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser,,..." />
+<meta name="description" content="Environment Setup:,, Description, Syntax,,, Set PowerShell execution policy (Windows), Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser,, Install Scoop (Windows), Invoke-RestMet..." />
 <meta name="twitter:card" content="summary_large_image" />
     <link href="https://www.pyopensci.org/images/favicon.ico" rel="icon" type="image/x-icon">
-    <title>Add a README file to your Python package &#8212; Python Packaging Guide</title>
+    <title>Command Line Reference Guide &#8212; Python Packaging Guide</title>
   
   
   
@@ -56,13 +56,13 @@
     <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
     <script src="../_static/copybutton.js?v=f281be69"></script>
     <script src="../_static/design-tabs.js?v=f930bc37"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'tutorials/add-readme';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'tutorials/command-line-reference';</script>
     <script src="../_static/matomo.js?v=5a92784f"></script>
-    <link rel="canonical" href="https://www.pyopensci.org/python-package-guide/tutorials/add-readme.html" />
+    <link rel="canonical" href="https://www.pyopensci.org/python-package-guide/tutorials/command-line-reference.html" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Add a LICENSE &amp; CODE_OF_CONDUCT to your Python package" href="add-license-coc.html" />
-    <link rel="prev" title="Publish your Python package that is on PyPI to conda-forge" href="publish-conda-forge.html" />
+    <link rel="next" title="Using Hatch to Migrate setup.py to a pyproject.toml" href="setup-py-to-pyproject-toml.html" />
+    <link rel="prev" title="Make your Python package PyPI ready - pyproject.toml" href="pyproject-toml.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -453,14 +453,14 @@ document.write(`
 <li class="toctree-l1"><a class="reference internal" href="publish-conda-forge.html">Publish to conda-forge</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Project information files &amp; metadata</span></p>
-<ul class="current nav bd-sidenav">
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">Add README file</a></li>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="add-readme.html">Add README file</a></li>
 <li class="toctree-l1"><a class="reference internal" href="add-license-coc.html">Add a license &amp; code of conduct</a></li>
 <li class="toctree-l1"><a class="reference internal" href="pyproject-toml.html">Update metadata in pyproject.toml</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Reference Guides</span></p>
-<ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="command-line-reference.html">Command Line Reference Guide</a></li>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Command Line Reference Guide</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Hatch for Existing Packages</span></p>
 <ul class="nav bd-sidenav">
@@ -505,7 +505,7 @@ document.write(`
     
     <li class="breadcrumb-item"><a href="intro.html" class="nav-link">Python packaging 101</a></li>
     
-    <li class="breadcrumb-item active" aria-current="page">Add a...</li>
+    <li class="breadcrumb-item active" aria-current="page">Command...</li>
   </ul>
 </nav>
 </div>
@@ -522,227 +522,160 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section id="add-a-readme-file-to-your-python-package">
-<h1>Add a README file to your Python package<a class="headerlink" href="#add-a-readme-file-to-your-python-package" title="Link to this heading">#</a></h1>
-<p>In the previous lessons you learned:</p>
-<ol class="arabic simple">
-<li><p><a class="reference internal" href="intro.html"><span class="std std-doc">What a Python package is</span></a></p></li>
-<li><p><a class="reference internal" href="installable-code.html"><span class="doc std std-doc">How to make your code installable</span></a></p></li>
-<li><p><a class="reference internal" href="publish-pypi.html"><span class="std std-doc">How to publish your package to (test) PyPI</span></a></p></li>
-<li><p><a class="reference internal" href="publish-conda-forge.html"><span class="std std-doc">How to publish your package to conda-forge</span></a></p></li>
-</ol>
-<div class="admonition-learning-objectives admonition">
-<p class="admonition-title">Learning objectives</p>
-<p>In this lesson you will learn:</p>
-<ol class="arabic simple">
-<li><p>How to add a <strong>README.md</strong> file to your package.</p></li>
-<li><p>What the core elements of a <strong>README.md</strong> file are.</p></li>
-</ol>
+  <section id="command-line-reference-guide">
+<h1>Command Line Reference Guide<a class="headerlink" href="#command-line-reference-guide" title="Link to this heading">#</a></h1>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p><strong>What these tables are:</strong> These tables summarize the command line inputs (e.g., <code class="docutils literal notranslate"><span class="pre">pipx</span> <span class="pre">install</span> <span class="pre">hatch</span></code>,  <code class="docutils literal notranslate"><span class="pre">hatch</span> <span class="pre">build</span></code>) necessary to complete all steps in the package creation process, from installing Hatch to publishing the package on PyPI and conda-forge.</p>
+<p><strong>What these tables are not:</strong> These tables do not cover the manual/non-automated steps (e.g., create PyPI account, create PyPI API token) you have to complete throughout the package creation process.</p>
+<p><strong>Operating system note:</strong> The current iteration of this guide has been tested on the Windows OS only. Many commands are Windows-specific. OS-specific commands are indicated with parentheses after the description of the command, e.g., [COMMAND_DESCRIPTION] (Windows). Corresponding commands for macOS and Linux will be added in the future.</p>
 </div>
-<section id="what-is-a-readme-file">
-<h2>What is a README file?<a class="headerlink" href="#what-is-a-readme-file" title="Link to this heading">#</a></h2>
-<p>The <code class="docutils literal notranslate"><span class="pre">README.md</span></code> file is a markdown file located at the root of your project directory that helps
-a user understand:</p>
-<ul class="simple">
-<li><p>You package’s name</p></li>
-<li><p>What the package does. Your README file should clearly state the problem(s) that your software is designed to solve and its target audience.</p></li>
-<li><p>The current development “state” of the package (through badges)</p></li>
-<li><p>How to get started with using your package.</p></li>
-<li><p>How to contribute to your package</p></li>
-<li><p>How to cite your package</p></li>
-</ul>
-<p>Your <strong>README.md</strong> file is important as it is often the first thing that someone sees before they install your package. The README file is also used to populate your PyPI landing page.</p>
-<p>Note that there is no specific content structure for README files.
-However, this tutorial outlines the sections that we suggest that you
-include in your README file.</p>
+<section id="environment-setup">
+<h2>Environment Setup<a class="headerlink" href="#environment-setup" title="Link to this heading">#</a></h2>
+<table class="table table-center">
+<thead>
+<tr class="row-odd"><th class="head"><p>Description</p></th>
+<th class="head"><p>Syntax</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Set PowerShell execution policy (Windows)</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">Set-ExecutionPolicy</span> <span class="pre">-ExecutionPolicy</span> <span class="pre">RemoteSigned</span> <span class="pre">-Scope</span> <span class="pre">CurrentUser</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p>Install Scoop (Windows)</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">Invoke-RestMethod</span> <span class="pre">-Uri</span> <span class="pre">https://get.scoop.sh</span> <span class="pre">|</span> <span class="pre">Invoke-Expression</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p>Add “main” bucket as download source (Windows)</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">scoop</span> <span class="pre">bucket</span> <span class="pre">add</span> <span class="pre">main</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p>Add “versions” bucket as download source (Windows)</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">scoop</span> <span class="pre">bucket</span> <span class="pre">add</span> <span class="pre">versions</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p>Install pipx (Windows)</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">scoop</span> <span class="pre">install</span> <span class="pre">pipx</span></code> or <code class="docutils literal notranslate"><span class="pre">scoop</span> <span class="pre">install</span> <span class="pre">main/pipx</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p>Update PATH variable with pipx directory</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">pipx</span> <span class="pre">ensurepath</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p>Install hatch</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">pipx</span> <span class="pre">install</span> <span class="pre">hatch</span></code> or <code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">hatch</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p>List hatch commands</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">hatch</span> <span class="pre">-h</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p>Open location of hatch config file</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">hatch</span> <span class="pre">config</span> <span class="pre">explore</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p>Print contents of hatch config file</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">hatch</span> <span class="pre">config</span> <span class="pre">show</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p>Install grayskull</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">pipx</span> <span class="pre">install</span> <span class="pre">grayskull</span></code> or <code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">grayskull</span></code></p></td>
+</tr>
+</tbody>
+</table>
 </section>
-<section id="create-a-readme-md-file-for-your-package">
-<h2>Create a README.md file for your package<a class="headerlink" href="#create-a-readme-md-file-for-your-package" title="Link to this heading">#</a></h2>
-<p>It’s time to add a <code class="docutils literal notranslate"><span class="pre">README.md</span></code> file to your project directory.</p>
-<section id="step-0-create-a-readme-file">
-<h3>Step 0: Create a README file<a class="headerlink" href="#step-0-create-a-readme-file" title="Link to this heading">#</a></h3>
-<p>To get started, if you don’t already have a README.md file in your project directory, create one.</p>
-<div class="admonition tip">
-<p class="admonition-title">Tip</p>
-<p>If you created your project directory from</p>
-<ul class="simple">
-<li><p>a GitHub repository online</p></li>
-<li><p>using <code class="docutils literal notranslate"><span class="pre">hatch</span> <span class="pre">init</span></code></p></li>
-</ul>
-<p>Then you may already have a README.MD file in your project directory.</p>
-</div>
-<!-- If they use hatch init in the very first lesson -
-the readme will already be there-->
+<section id="package-development">
+<h2>Package Development<a class="headerlink" href="#package-development" title="Link to this heading">#</a></h2>
+<table class="table table-center">
+<thead>
+<tr class="row-odd"><th class="head"><p>Description</p></th>
+<th class="head"><p>Syntax</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Create package structure and baseline contents</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">hatch</span> <span class="pre">new</span> <span class="pre">[PACKAGE_NAME]</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p>Install package locally in editable mode</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">python</span> <span class="pre">-m</span> <span class="pre">pip</span> <span class="pre">install</span> <span class="pre">-e</span> <span class="pre">.</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p>Install development dependencies</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">python</span> <span class="pre">-m</span> <span class="pre">pip</span> <span class="pre">install</span> <span class="pre">&quot;.[DEPENDENCY_GROUP]&quot;</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p>List packages installed in current environment</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">list</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p>Install package from GitHub</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">git+https://github.com/user/repo.git&#64;branch_or_tag</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p>Create development environment</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">hatch</span> <span class="pre">env</span> <span class="pre">create</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p>Activate development environment</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">hatch</span> <span class="pre">shell</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p>Exit development environment</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">exit</span></code></p></td>
+</tr>
+</tbody>
+</table>
 </section>
-<section id="step-1-add-the-name-of-your-package-as-the-readme-title">
-<h3>Step 1: Add the name of your package as the README title<a class="headerlink" href="#step-1-add-the-name-of-your-package-as-the-readme-title" title="Link to this heading">#</a></h3>
-<p>At the top of the <code class="docutils literal notranslate"><span class="pre">README.md</span></code> file, add the name of your package.</p>
-<p>If you are using markdown it should be a header 1 (H1) tag which is denoted with a single <code class="docutils literal notranslate"><span class="pre">#</span></code> sign.</p>
-<p><code class="docutils literal notranslate"><span class="pre">#</span> <span class="pre">Package-title-here</span></code></p>
+<section id="package-publishing">
+<h2>Package Publishing<a class="headerlink" href="#package-publishing" title="Link to this heading">#</a></h2>
+<table class="table table-center">
+<thead>
+<tr class="row-odd"><th class="head"><p>Description</p></th>
+<th class="head"><p>Syntax</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Build package sdist and wheel distributions</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">hatch</span> <span class="pre">build</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p>Publish package to Test PyPI</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">hatch</span> <span class="pre">publish</span> <span class="pre">-r</span> <span class="pre">test</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p>Install package from Test PyPI</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">-i</span> <span class="pre">https://test.pypi.org/simple/</span> <span class="pre">[PACKAGE_NAME]</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p>Publish package to PyPI</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">hatch</span> <span class="pre">publish</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p>Install package from PyPI</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">-i</span> <span class="pre">https://pypi.org/simple/</span> <span class="pre">[PACKAGE_NAME]</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p>Create conda-forge recipe</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">grayskull</span> <span class="pre">pypi</span> <span class="pre">[PACKAGE_NAME]</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p>Check that package installs properly</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">check</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p>Install package from conda-forge</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">install</span> <span class="pre">-c</span> <span class="pre">conda-forge</span> <span class="pre">[PACKAGE_NAME]</span></code></p></td>
+</tr>
+</tbody>
+</table>
 </section>
-<section id="step-2-add-badges-to-the-top-of-your-readme-file">
-<h3>Step 2: add badges to the top of your README file<a class="headerlink" href="#step-2-add-badges-to-the-top-of-your-readme-file" title="Link to this heading">#</a></h3>
-<p>It’s common for maintainers to add badges to the top of their README files. Badges allow you and your package users to track things like:</p>
-<ul class="simple">
-<li><p>Broken documentation and test builds.</p></li>
-<li><p>Versions of your package that are on PyPI and conda.</p></li>
-<li><p>Whether your package has been reviewed and vetted by an organization such as pyOpenSci and/or JOSS.</p></li>
-</ul>
-<p>If you have already published your package to pypi.org you can use <a class="reference external" href="https://shields.io/badges/py-pi-version">shields.io to create a package version badge</a>. This badge will dynamically update as you release new versions of your package to PyPI.</p>
-<p>If not, you can leave the top empty for now and add badges to your README at a later point as they make sense.</p>
-</section>
-<section id="step-3-add-a-description-of-what-your-package-does">
-<h3>Step 3: Add a description of what your package does<a class="headerlink" href="#step-3-add-a-description-of-what-your-package-does" title="Link to this heading">#</a></h3>
-<p>Below the badges (if you have them), add a section of text
-that provides an easy-to-understand overview of what your
-package does.</p>
-<ul class="simple">
-<li><p>Keep this section short.</p></li>
-<li><p>Try to avoid jargon.</p></li>
-<li><p>Define technical terms that you use to make the description accessible to more people.</p></li>
-</ul>
-<p>Remember that the more people understand what your package does, the more people will use it.</p>
-</section>
-<section id="step-4-add-package-installation-instructions">
-<h3>Step 4: Add package installation instructions<a class="headerlink" href="#step-4-add-package-installation-instructions" title="Link to this heading">#</a></h3>
-<p>Next, add instructions that tell users how to install your package.</p>
-<p>For example, can they use pip to install your package?
-<code class="docutils literal notranslate"><span class="pre">python</span> <span class="pre">-m</span> <span class="pre">pip</span> <span class="pre">install</span> <span class="pre">packagename</span></code></p>
-<p>or conda?</p>
-<p><code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">install</span> <span class="pre">-c</span> <span class="pre">conda-forge</span> <span class="pre">packagename</span></code>.</p>
-<p>If you haven’t yet published your package to pypi.org then
-you can skip this section and come back and add these
-instructions later.</p>
-</section>
-<section id="step-5-any-additional-setup">
-<h3>Step 5: Any additional setup<a class="headerlink" href="#step-5-any-additional-setup" title="Link to this heading">#</a></h3>
-<p>In some cases, your package users may need to manually
-install other tools in order to use your package. If that
-is the case, be sure to add a section on additional setup
-to your README file.</p>
-<p>Here, briefly document (or link to documentation for) any
-additional setup that is required to use your package.
-This might include:</p>
-<ul class="simple">
-<li><p>authentication information, if it is applicable to your package.</p></li>
-<li><p>additional tool installations, such as GDAL.</p></li>
-</ul>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>Many packages won’t need an additional setup section in their README.
-In that case you can always skip this section.</p>
-</div>
-</section>
-<section id="step-6-add-a-get-started-section">
-<h3>Step 6: Add a get started section<a class="headerlink" href="#step-6-add-a-get-started-section" title="Link to this heading">#</a></h3>
-<p>Next add a get-started section. Within this section, add a small code example that demonstrates importing and using
-some of the functionality in your package.</p>
-<div class="important admonition">
-<p class="admonition-title">Provide a fully functional code snippet if possible</p>
-<p>It is important to try to make the code examples that you provide your users as useful as possible.</p>
-<p>Be sure to provide a copy/paste code example that will work as-is when pasted into a Jupyter Notebook or .py file if that is possible.</p>
-<p>If there are tokens and other steps needed to run your package, be sure to be clear about what those steps are.</p>
-</div>
-<p>For the pyosPackage, a short get started demo might look like this:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">pyospackage.add_numbers</span> <span class="kn">import</span> <span class="n">add_num</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">add_num</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
-<span class="go">3</span>
-</pre></div>
-</div>
-<p>Or it could simply be a link to a getting started tutorial that you have created. If
-you don’t have this yet, you can leave it empty for the time being.</p>
-<p>This would
-also be a great place to add links to tutorials that
-help users understand how to use your package for common workflows.</p>
-</section>
-<section id="step-7-community-section">
-<h3>Step 7: Community section<a class="headerlink" href="#step-7-community-section" title="Link to this heading">#</a></h3>
-<p>The community section of your README file is a place to include information for users who may want to engage with your project. This engagement will likely happen on a platform like GitHub or GitLab.</p>
-<p>In the community section, you will add links to your contributing guide
-and <code class="docutils literal notranslate"><span class="pre">CODE_OF_CONDUCT.md</span></code>. You will create a <a class="reference internal" href="add-license-coc.html"><span class="doc std std-doc"><code class="docutils literal notranslate"><span class="pre">CODE_OF_CONDUCT.md</span></code> file in the next lesson</span></a>.</p>
-<p>As your package grows you may also have a link to a development guide that contributors and your maintainer team will follow. The development guide
-outlines how to perform maintenance tasks such as:</p>
-<ul class="simple">
-<li><p>running tests</p></li>
-<li><p>making package releases</p></li>
-<li><p>building documentation</p></li>
-<li><p>and more.</p></li>
-</ul>
-</section>
-<section id="step-8-citation-information">
-<h3>Step 8: Citation information<a class="headerlink" href="#step-8-citation-information" title="Link to this heading">#</a></h3>
-<p>Finally it is important to let users know how to cite your package.
-You can communicate citation information in a few different ways.</p>
-<p>You can use a tool such as zenodo to create a DOI and associated citation
-information for your package if it is hosted on a platform such as
-GitHub. <a class="reference external" href="https://coderefinery.github.io/github-without-command-line/doi/">Check out this short tutorial that covers setting that up.</a></p>
-<p>Alternatively if you send your package through a peer review process such
-as the <a class="reference external" href="https://www.pyopensci.org/about-peer-review/index.html">one lead by pyOpenSci</a>. After being accepted by pyOpenSci, if your package is in scope, you can be accepted by the Journal of Open Source Software and get a cross-ref DOI through <a class="reference external" href="https://www.pyopensci.org/about-peer-review/index.html">our partnership with the Journal of Open Source Software.</a></p>
-</section>
-</section>
-<section id="the-finished-readme-file">
-<h2>The finished README file<a class="headerlink" href="#the-finished-readme-file" title="Link to this heading">#</a></h2>
-<p>Your finished <code class="docutils literal notranslate"><span class="pre">README.md</span></code> file should look something like this:</p>
-<div class="highlight-markdown notranslate"><div class="highlight"><pre><span></span><span class="gh"># pyosPackage</span>
-
-[<span class="nt">![DOI</span>](<span class="na">https://zenodo.org/badge/DOI/10.5281/zenodo.8365068.svg</span>)](https://doi.org/10.5281/zenodo.8365068)
-[<span class="nt">![pyOpenSci</span>](<span class="na">https://pyopensci.org/badges/peer-reviewed.svg</span>)](https://github.com/pyOpenSci/software-review/issues/115)
-
-<span class="gu">## What pyosPackage does</span>
-
-Short description here using non-technical language that describes what your package does.
-
-<span class="gu">## How to install pyosPackage</span>
-
-:::{todo}
-<span class="k">-</span><span class="w"> </span>when i add more to the pyos package this can use that readme&gt;
-:::
-
-To install this package run:
-
-<span class="sb">`python -m pip install pyosPackage`</span>
-
-<span class="gu">## OPTIONAL - if you have additional setup instructions add them here. If not, skip this section.</span>
-
-<span class="gu">## Get started using pyosPackage</span>
-
-Here add a quick code demo showing a user how to use the package after it is installed.
-
-<span class="sb">```python</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="kn">from</span> <span class="nn">pyospackage.add_numbers</span> <span class="kn">import</span> <span class="n">add_num</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">add_num</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
-<span class="mi">3</span>
-
-<span class="sb">```</span>
-
-You can also add any links to tutorials in your documentation here.
-
-<span class="gu">## Community</span>
-
-Add information here about contributing to your package. Be sure to add links to your
-<span class="sb">`CODE_OF_CONDUCT.md`</span> file and your development guide. For now this section might be
-empty. You can go back and fill it in later.
-
-<span class="gu">## How to cite pyosPackage</span>
-
-citation information here
-</pre></div>
-</div>
-</section>
-<section id="wrap-up">
-<h2><i class="fa-solid fa-hands-bubbles"></i> Wrap up<a class="headerlink" href="#wrap-up" title="Link to this heading">#</a></h2>
-<p>It’s important to consider the information that a new user or contributor might
-need when creating your <code class="docutils literal notranslate"><span class="pre">README.md</span></code> file. While there is no perfect template,
-above is a set of recommendations as you are just getting started. You may find
-the need for other elements to be added to this file as you further develop your
-package and as a community begins to use your package.</p>
-<p>In the <a class="reference internal" href="add-license-coc.html"><span class="std std-doc">next lesson</span></a>, you will add a LICENSE file to
-your Python package. A license file is critical as it tells users
-how they legally can (and can’t) use your package. It also:</p>
-<ul class="simple">
-<li><p>Builds trust with your users</p></li>
-<li><p>Discourages misuse of your package and associated code</p></li>
-</ul>
+<section id="versions-and-environments">
+<h2>Versions and Environments<a class="headerlink" href="#versions-and-environments" title="Link to this heading">#</a></h2>
+<table class="table table-center">
+<thead>
+<tr class="row-odd"><th class="head"><p>Description</p></th>
+<th class="head"><p>Syntax</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>View environments</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">hatch</span> <span class="pre">env</span> <span class="pre">show</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p>Print path to active hatch environment</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">hatch</span> <span class="pre">env</span> <span class="pre">find</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p>Bump package version - major</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">hatch</span> <span class="pre">version</span> <span class="pre">major</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p>Bump package version - minor</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">hatch</span> <span class="pre">version</span> <span class="pre">minor</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p>Bump package version - patch</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">hatch</span> <span class="pre">version</span> <span class="pre">patch</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p>Run test scripts on multiple Python versions</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">hatch</span> <span class="pre">run</span> <span class="pre">all:[SCRIPT_NAME]</span></code></p></td>
+</tr>
+</tbody>
+</table>
 </section>
 </section>
 
@@ -757,20 +690,20 @@ how they legally can (and can’t) use your package. It also:</p>
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="publish-conda-forge.html"
+       href="pyproject-toml.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Publish your Python package that is on PyPI to conda-forge</p>
+        <p class="prev-next-title">Make your Python package PyPI ready - pyproject.toml</p>
       </div>
     </a>
     <a class="right-next"
-       href="add-license-coc.html"
+       href="setup-py-to-pyproject-toml.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Add a <code class="docutils literal notranslate"><span class="pre">LICENSE</span></code> &amp; <code class="docutils literal notranslate"><span class="pre">CODE_OF_CONDUCT</span></code> to your Python package</p>
+        <p class="prev-next-title">Using Hatch to Migrate setup.py to a pyproject.toml</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -792,21 +725,10 @@ how they legally can (and can’t) use your package. It also:</p>
   </div>
   <nav class="bd-toc-nav page-toc" aria-labelledby="pst-page-navigation-heading-2">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-a-readme-file">What is a README file?</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#create-a-readme-md-file-for-your-package">Create a README.md file for your package</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-0-create-a-readme-file">Step 0: Create a README file</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-1-add-the-name-of-your-package-as-the-readme-title">Step 1: Add the name of your package as the README title</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-2-add-badges-to-the-top-of-your-readme-file">Step 2: add badges to the top of your README file</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-3-add-a-description-of-what-your-package-does">Step 3: Add a description of what your package does</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-4-add-package-installation-instructions">Step 4: Add package installation instructions</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-5-any-additional-setup">Step 5: Any additional setup</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-6-add-a-get-started-section">Step 6: Add a get started section</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-7-community-section">Step 7: Community section</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-8-citation-information">Step 8: Citation information</a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-finished-readme-file">The finished README file</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#wrap-up"><i class="fa-solid fa-hands-bubbles"></i> Wrap up</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#environment-setup">Environment Setup</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#package-development">Package Development</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#package-publishing">Package Publishing</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#versions-and-environments">Versions and Environments</a></li>
 </ul>
   </nav></div>
 
@@ -814,7 +736,7 @@ how they legally can (and can’t) use your package. It also:</p>
 
   
   <div class="tocsection editthispage">
-    <a href="https://github.com/pyopensci/python-package-guide/edit/main/tutorials/add-readme.md">
+    <a href="https://github.com/pyopensci/python-package-guide/edit/main/tutorials/command-line-reference.md">
       <i class="fa-solid fa-pencil"></i>
       
       
@@ -829,7 +751,7 @@ how they legally can (and can’t) use your package. It also:</p>
   <div class="sidebar-secondary-item">
 
   <div class="tocsection sourcelink">
-    <a href="../_sources/tutorials/add-readme.md.txt">
+    <a href="../_sources/tutorials/command-line-reference.md.txt">
       <i class="fa-solid fa-file-lines"></i> Show Source
     </a>
   </div>
