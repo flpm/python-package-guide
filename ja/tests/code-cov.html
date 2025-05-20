@@ -1,0 +1,715 @@
+
+<!DOCTYPE html>
+
+
+<html lang="ja" data-content_root="../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta property="og:title" content="Pythonパッケージのテストスイートのコードカバレッジ" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://www.pyopensci.org/python-package-guide/tests/code-cov.html" />
+<meta property="og:site_name" content="pyOpenSci Python Package Guide" />
+<meta property="og:description" content="コードカバレッジは、テスト中にパッケージのコードがどれだけ実行されるかを測定します。 高いカバレッジを達成することは、コードベースの信頼性を確保するのに役立ちますが、品質を保証するものではありません。 以下に、コードカバレッジを効果的に使用するための主な検討事項を概説します。 なぜ高いコードカバレッジを目指すのか？: 良い習慣は、テストスイートの間に、コードのすべての行が少なくとも一度は実行..." />
+<meta property="og:image:width" content="1146" />
+<meta property="og:image:height" content="600" />
+<meta property="og:image" content="https://www.pyopensci.org/python-package-guide/_images/social_previews/summary_tests_code-cov_75919bba.png" />
+<meta property="og:image:alt" content="コードカバレッジは、テスト中にパッケージのコードがどれだけ実行されるかを測定します。 高いカバレッジを達成することは、コードベースの信頼性を確保するのに役立ちますが、品質を保証するものではありません。 以下に、コードカバレッジを効果的に使用するための主な検討事項を概説します。 なぜ高いコードカバレッジを目指すのか？: 良い習慣は、テストスイートの間に、コードのすべての行が少なくとも一度は実行..." />
+<meta name="description" content="コードカバレッジは、テスト中にパッケージのコードがどれだけ実行されるかを測定します。 高いカバレッジを達成することは、コードベースの信頼性を確保するのに役立ちますが、品質を保証するものではありません。 以下に、コードカバレッジを効果的に使用するための主な検討事項を概説します。 なぜ高いコードカバレッジを目指すのか？: 良い習慣は、テストスイートの間に、コードのすべての行が少なくとも一度は実行..." />
+<meta name="twitter:card" content="summary_large_image" />
+    <link href="https://www.pyopensci.org/images/favicon.ico" rel="icon" type="image/x-icon">
+    <title>Pythonパッケージのテストスイートのコードカバレッジ &#8212; Python Packaging Guide</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=8f2a1f02" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="../_static/pyos.css?v=f8185577" />
+  
+  <!-- So that users can add custom icons -->
+  <script src="../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
+
+    <script src="../_static/documentation_options.js?v=be13464f"></script>
+    <script src="../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/translations.js?v=4755f45a"></script>
+    <script src="../_static/design-tabs.js?v=f930bc37"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'tests/code-cov';</script>
+    <script src="../_static/matomo.js?v=5a92784f"></script>
+    <script src="../_static/language_select.js?v=a2e723a3"></script>
+    <link rel="canonical" href="https://www.pyopensci.org/python-package-guide/tests/code-cov.html" />
+    <link rel="index" title="索引" href="../genindex.html" />
+    <link rel="search" title="検索" href="../search.html" />
+    <link rel="next" title="Pythonパッケージの継続的インテグレーションと継続的デプロイメント(CI/CD)" href="../continuous-integration/index.html" />
+    <link rel="prev" title="継続的インテグレーションによるテストの実行" href="tests-ci.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="ja"/>
+  <meta name="docsearch:version" content="" />
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">本文へスキップ</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>トップに戻る</button>
+
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="バージョン警告"></aside>
+</div>
+<aside class="bd-header-announcement" aria-label="Announcement">
+  <div class="bd-header-announcement__content"><p><a href='https://www.pyopensci.org/about-peer-review/index.html'>We run peer review of scientific Python software. Learn more.</a></p></div>
+</aside>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+<div class="bd-header__inner bd-page-width">
+  <button class="pst-navbar-icon sidebar-toggle primary-toggle" aria-label="サイトナビゲーション">
+    <span class="fa-solid fa-bars"></span>
+  </button>
+  
+  
+  <div class="col-lg-3 navbar-header-items__start">
+    
+      <div class="navbar-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../index.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../_static/logo-light-mode.png" class="logo__image only-light" alt="pyOpenSci Python Package Guide. The pyOpenSci logo is a purple flower with pyOpenSci under it. The o in open sci is the center of the flower"/>
+    <img src="../_static/logo-dark-mode.png" class="logo__image only-dark pst-js-only" alt="pyOpenSci Python Package Guide. The pyOpenSci logo is a purple flower with pyOpenSci under it. The o in open sci is the center of the flower"/>
+  
+  
+</a></div>
+    
+  </div>
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    <div class="me-auto navbar-header-items__center">
+      
+        <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../tutorials/intro.html">
+    チュートリアル
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../package-structure-code/intro.html">
+    パッケージング
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../documentation/index.html">
+    ドキュメンテーション
+  </a>
+</li>
+
+
+<li class="nav-item current active">
+  <a class="nav-link nav-internal" href="index.html">
+    テスト
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../continuous-integration/index.html">
+    CI/CD
+  </a>
+</li>
+
+            <li class="nav-item dropdown">
+                <button class="btn dropdown-toggle nav-item" type="button"
+                data-bs-toggle="dropdown" aria-expanded="false"
+                aria-controls="pst-nav-more-links">
+                    More
+                </button>
+                <ul id="pst-nav-more-links" class="dropdown-menu">
+                    
+<li class=" ">
+  <a class="nav-link dropdown-item nav-external" href="https://www.pyopensci.org">
+    pyOpenSci Website
+  </a>
+</li>
+
+
+<li class=" ">
+  <a class="nav-link dropdown-item nav-external" href="https://www.pyopensci.org/software-peer-review">
+    Peer Review Guide
+  </a>
+</li>
+
+
+<li class=" ">
+  <a class="nav-link dropdown-item nav-external" href="https://pyopensci.org/handbook">
+    Handbook
+  </a>
+</li>
+
+                </ul>
+            </li>
+            
+  </ul>
+</nav></div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          <select class="dropdown" id="language-selector" aria-label="Choose a language">
+  
+<option
+  value="/python-package-guide/ja/tests/code-cov.html"
+  selected
+>
+  ja
+</option>
+<option
+  value="/python-package-guide/tests/code-cov.html"
+  
+>
+  en
+</option>
+</select>
+        </div>
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="検索" aria-label="検索" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+</button>
+        </div>
+      
+      
+        <div class="navbar-item">
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="ライト"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="ダーク"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button></div>
+      
+        <div class="navbar-item"><ul class="navbar-icon-links"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/pyopensci/python-package-guide" title="GitHub" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-square-github fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">GitHub</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://fosstodon.org/@pyOpenSci" title="Mastodon" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-mastodon fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">Mastodon</span></a>
+        </li>
+</ul></div>
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile"><select class="dropdown" id="language-selector" aria-label="Choose a language">
+  
+<option
+  value="/python-package-guide/ja/tests/code-cov.html"
+  selected
+>
+  ja
+</option>
+<option
+  value="/python-package-guide/tests/code-cov.html"
+  
+>
+  en
+</option>
+</select>
+    </div>
+  
+    <div class="navbar-persistent--mobile">
+
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="検索" aria-label="検索" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+</button>
+    </div>
+  
+
+  
+    <button class="pst-navbar-icon sidebar-toggle secondary-toggle" aria-label="このページでは">
+      <span class="fa-solid fa-outdent"></span>
+    </button>
+  
+</div>
+
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          
+          
+            <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../tutorials/intro.html">
+    チュートリアル
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../package-structure-code/intro.html">
+    パッケージング
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../documentation/index.html">
+    ドキュメンテーション
+  </a>
+</li>
+
+
+<li class="nav-item current active">
+  <a class="nav-link nav-internal" href="index.html">
+    テスト
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../continuous-integration/index.html">
+    CI/CD
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-external" href="https://www.pyopensci.org">
+    pyOpenSci Website
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-external" href="https://www.pyopensci.org/software-peer-review">
+    Peer Review Guide
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-external" href="https://pyopensci.org/handbook">
+    Handbook
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+          
+        
+      </div>
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item">
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="ライト"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="ダーク"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button></div>
+        
+          <div class="navbar-item"><ul class="navbar-icon-links"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/pyopensci/python-package-guide" title="GitHub" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-square-github fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">GitHub</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://fosstodon.org/@pyOpenSci" title="Mastodon" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-mastodon fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">Mastodon</span></a>
+        </li>
+</ul></div>
+        
+      </div>
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+<nav class="bd-docs-nav bd-links"
+     aria-label="セクションナビゲーション">
+  <p class="bd-links__title" role="heading" aria-level="1">セクションナビゲーション</p>
+  <div class="bd-toc-item navbar-nav"><p aria-level="2" class="caption" role="heading"><span class="caption-text">テストの作成と実行</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="index.html">イントロ</a></li>
+<li class="toctree-l1"><a class="reference internal" href="write-tests.html">テストを書く</a></li>
+<li class="toctree-l1"><a class="reference internal" href="test-types.html">テストの種類</a></li>
+<li class="toctree-l1"><a class="reference internal" href="run-tests.html">ローカルでテストを実行する</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tests-ci.html">オンラインでテストを実行する(CIを使用する)</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">コードカバレッジ</a></li>
+</ul>
+</div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
+  </div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item">
+
+<nav aria-label="パンくずリスト" class="d-print-none">
+  <ul class="bd-breadcrumbs">
+    
+    <li class="breadcrumb-item breadcrumb-home">
+      <a href="../index.html" class="nav-link" aria-label="ホーム">
+        <i class="fa-solid fa-home"></i>
+      </a>
+    </li>
+    
+    <li class="breadcrumb-item"><a href="index.html" class="nav-link">Pythonパッケージのテストとデータ</a></li>
+    
+    <li class="breadcrumb-item active" aria-current="page"><span class="ellipsis">Pythonパッケージのテストスイートのコードカバレッジ</span></li>
+  </ul>
+</nav>
+</div>
+      
+    </div>
+  
+  
+</div>
+</div>
+              
+              
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="code-coverage-for-your-python-package-test-suite">
+<h1>Pythonパッケージのテストスイートのコードカバレッジ<a class="headerlink" href="#code-coverage-for-your-python-package-test-suite" title="Link to this heading">#</a></h1>
+<p>コードカバレッジは、テスト中にパッケージのコードがどれだけ実行されるかを測定します。 高いカバレッジを達成することは、コードベースの信頼性を確保するのに役立ちますが、品質を保証するものではありません。 以下に、コードカバレッジを効果的に使用するための主な検討事項を概説します。</p>
+<section id="why-aim-for-high-code-coverage">
+<h2>なぜ高いコードカバレッジを目指すのか？<a class="headerlink" href="#why-aim-for-high-code-coverage" title="Link to this heading">#</a></h2>
+<p>良い習慣は、テストスイートの間に、コードのすべての行が少なくとも一度は実行されるようにすることです。これはあなたを助けます:</p>
+<ul class="simple">
+<li><p>コードベースのテストされていない部分を特定します。</p></li>
+<li><p>他の方法では気づかれないかもしれないバグをキャッチします。</p></li>
+<li><p>ソフトウェアの安定性に自信を持てます。</p></li>
+</ul>
+</section>
+<section id="limitations-of-code-coverage">
+<h2>コードカバレッジの限界<a class="headerlink" href="#limitations-of-code-coverage" title="Link to this heading">#</a></h2>
+<p>高いコードカバレッジは価値がありますが、それには限界があります:</p>
+<ul class="simple">
+<li><p><strong>テストしにくいコード:</strong> コードの中には、複雑さや限られたリソースのために、テストが難しい部分があるかもしれません。</p></li>
+<li><p><strong>見逃されたエッジケース:</strong> すべてのコードを実行しても、エッジケースが正しく処理される保証はありません。</p></li>
+</ul>
+<p>最終的には、パッケージがどのように使用されるかに焦点を当て、テストがそのシナリオを十分にカバーするようにしなければなりません。</p>
+</section>
+<section id="tools-for-analyzing-python-package-code-coverage">
+<h2>Pythonパッケージのコードカバレッジを分析するツール<a class="headerlink" href="#tools-for-analyzing-python-package-code-coverage" title="Link to this heading">#</a></h2>
+<p>コードカバレッジを分析するための一般的なサービスには、 <a class="reference external" href="https://codecov.io/">codecov.io</a> と <a class="reference external" href="https://coveralls.io/">coveralls.io</a> があります。 これらのプロジェクトはオープンソースのツールで無料であり、テスト中にコードベースがどの程度カバーされているかを示すダッシュボードを提供してくれます。 (CodeCovまたはCoverallsで) アカウントを設定し、コード・カバレッジを追跡するために使用することをお勧めします。</p>
+<figure class="align-default" id="id1">
+<a class="reference internal image-reference" href="../_images/code-cov-stravalib.png"><img alt="code covサービスのスクリーンショット - stravalibパッケージのテストカバレッジを示します。 この画像は、パッケージモジュールのリストと、関連する行数およびテスト対象行の割合を示しています。 画像の上部には、評価対象のブランチとリポジトリへのパスが表示されています。" src="../_images/code-cov-stravalib.png" style="height: 450px;" />
+</a>
+<figcaption>
+<p><span class="caption-text">CodeCovプラットフォームは、コードカバレッジを視覚的に追跡したい場合に便利なツールです。これを使えば、 <strong>pytest-cov</strong> 拡張機能で得られるのと同じサマリー情報を得られるだけではありません。また、テストの対象になっているラインとそうでないラインを確認することもできます。コードカバレッジは、単体テストの評価や、パッケージのコードがどれだけ &quot;カバー&quot; されているかを評価するのに役立ちます。しかし、統合テストやエンドツーエンドのワークフローなどは評価されません。</span><a class="headerlink" href="#id1" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<div class="admonition-typing-mypy-coverage admonition">
+<p class="admonition-title">型 &amp; MyPyのカバレッジ</p>
+<p>また、型レポートを作成し、CodeCovにアップロードすることもできます。</p>
+</div>
+</section>
+<section id="exporting-local-coverage-reports">
+<h2>ローカルカバレッジレポートのエクスポート<a class="headerlink" href="#exporting-local-coverage-reports" title="Link to this heading">#</a></h2>
+<p>CodeCovやCoverallsのようなサービスを利用するだけでなく、 <strong>coverage.py</strong> ツールを使って直接ローカルカバレッジレポートを作成することもできます。 これは、オフラインでの使用や文書化のためにMarkdownやHTML形式でレポートを作成したい場合に特に便利です。</p>
+<p>カバレッジレポートを <strong>Markdown</strong> 形式で作成するには、以下を実行します:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>python<span class="w"> </span>-m<span class="w"> </span>coverage<span class="w"> </span>report<span class="w"> </span>--format<span class="o">=</span>markdown
+</pre></div>
+</div>
+<p>このコマンドはMarkdown形式のカバレッジサマリーを作成し、プロジェクトのドキュメントに簡単に記載したり、チームと共有したりすることができます。</p>
+<p>どの行がカバーされているか、詳細でインタラクティブなビューを提供するHTMLレポートを生成するには、以下を使用します:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python<span class="w"> </span>-m<span class="w"> </span>coverage<span class="w"> </span>html
+</pre></div>
+</div>
+<p>生成されたHTMLレポートは、デフォルトでhtmlcovというディレクトリに保存されます。index.htmlファイルをブラウザで開き、カバレッジ結果をご覧ください。</p>
+<p>このようなローカルレポートは、外部サービスを立ち上げることなくカバレッジを素早く確認する優れた方法です。</p>
+</section>
+</section>
+
+
+                </article>
+              
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="tests-ci.html"
+       title="前のページ">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">前へ</p>
+        <p class="prev-next-title">継続的インテグレーションによるテストの実行</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="../continuous-integration/index.html"
+       title="次ページ">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">次へ</p>
+        <p class="prev-next-title">Pythonパッケージの継続的インテグレーションと継続的デプロイメント(CI/CD)</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+<div
+    id="pst-page-navigation-heading-2"
+    class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> このページでは
+  </div>
+  <nav class="bd-toc-nav page-toc" aria-labelledby="pst-page-navigation-heading-2">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#why-aim-for-high-code-coverage">なぜ高いコードカバレッジを目指すのか？</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#limitations-of-code-coverage">コードカバレッジの限界</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tools-for-analyzing-python-package-code-coverage">Pythonパッケージのコードカバレッジを分析するツール</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exporting-local-coverage-reports">ローカルカバレッジレポートのエクスポート</a></li>
+</ul>
+  </nav></div>
+
+  <div class="sidebar-secondary-item">
+
+  
+  <div class="tocsection editthispage">
+    <a href="https://github.com/pyopensci/python-package-guide/edit/main/tests/code-cov.md">
+      <i class="fa-solid fa-pencil"></i>
+      
+      
+        
+          GitHub の編集
+        
+      
+    </a>
+  </div>
+</div>
+
+  <div class="sidebar-secondary-item">
+  <div role="note" aria-label="source link">
+    <h3>このページ</h3>
+    <ul class="this-page-menu">
+      <li><a href="../_sources/tests/code-cov.md.txt"
+            rel="nofollow">ソースコードを表示</a></li>
+    </ul>
+   </div></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+          </footer>
+        
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
+
+  <footer class="bd-footer">
+<div class="bd-footer__inner bd-page-width">
+  
+    <div class="footer-items__start">
+      
+        <div class="footer-item"><p>
+  pyOpensci is dedicated to creating a welcoming, supportive and diverse
+  community around the open source Python tools that drive open science. Our
+  <a
+    href="https://www.pyopensci.org/handbook/CODE_OF_CONDUCT.html"
+    target="_blank"
+    >Code of Conduct</a
+  >
+  defines expected behavior and guidelines that help create such a community.
+</p></div>
+      
+        <div class="footer-item">
+
+  <p class="copyright">
+    
+      © Copyright 2025, pyOpenSci.
+      <br/>
+    
+  </p>
+</div>
+      
+    </div>
+  
+  
+  
+</div>
+
+  </footer>
+  </body>
+</html>

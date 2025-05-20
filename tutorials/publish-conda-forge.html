@@ -45,7 +45,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
-    <link rel="stylesheet" type="text/css" href="../_static/pyos.css?v=3cb6c64c" />
+    <link rel="stylesheet" type="text/css" href="../_static/pyos.css?v=f8185577" />
   
   <!-- So that users can add custom icons -->
   <script src="../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
@@ -54,13 +54,14 @@
 <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
 
     <script src="../_static/documentation_options.js?v=2709fde1"></script>
-    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/doctools.js?v=9bcbadda"></script>
     <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
     <script src="../_static/copybutton.js?v=f281be69"></script>
     <script src="../_static/design-tabs.js?v=f930bc37"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'tutorials/publish-conda-forge';</script>
     <script src="../_static/matomo.js?v=5a92784f"></script>
+    <script src="../_static/language_select.js?v=a2e723a3"></script>
     <link rel="canonical" href="https://www.pyopensci.org/python-package-guide/tutorials/publish-conda-forge.html" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
@@ -227,12 +228,28 @@
     <div class="navbar-header-items__end">
       
         <div class="navbar-item navbar-persistent--container">
+          <select class="dropdown" id="language-selector" aria-label="Choose a language">
+  
+<option
+  value="/python-package-guide/tutorials/publish-conda-forge.html"
+  selected
+>
+  en
+</option>
+<option
+  value="/python-package-guide/ja/tutorials/publish-conda-forge.html"
+  
+>
+  ja
+</option>
+</select>
+        </div>
+      
+        <div class="navbar-item navbar-persistent--container">
           
 
-<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
- <i class="fa-solid fa-magnifying-glass"></i>
- <span class="search-button__default-text">Search</span>
- <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
 </button>
         </div>
       
@@ -278,12 +295,27 @@
   </div>
   
   
+    <div class="navbar-persistent--mobile"><select class="dropdown" id="language-selector" aria-label="Choose a language">
+  
+<option
+  value="/python-package-guide/tutorials/publish-conda-forge.html"
+  selected
+>
+  en
+</option>
+<option
+  value="/python-package-guide/ja/tutorials/publish-conda-forge.html"
+  
+>
+  ja
+</option>
+</select>
+    </div>
+  
     <div class="navbar-persistent--mobile">
 
-<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
- <i class="fa-solid fa-magnifying-glass"></i>
- <span class="search-button__default-text">Search</span>
- <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
 </button>
     </div>
   
@@ -436,7 +468,7 @@
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Create and publish a Python Package</span></p>
 <ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="intro.html">What is a Python package?</a></li>
-<li class="toctree-l1"><a class="reference internal" href="installable-code.html">Make your code installable</a></li>
+<li class="toctree-l1"><a class="reference internal" href="installable-code.html">Create a Python package</a></li>
 <li class="toctree-l1"><a class="reference internal" href="publish-pypi.html">Publish to PyPI</a></li>
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">Publish to conda-forge</a></li>
 </ul>
@@ -621,7 +653,7 @@ that you have been using to run hatch
 commands in the previous tutorials.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>You can also install grayskull using pipx<a class="footnote-reference brackets" href="#pipx" id="id2" role="doc-noteref"><span class="fn-bracket">[</span>2<span class="fn-bracket">]</span></a>. pipx is a tool that allows you to install commonly used tools that you might want to have available across multiple Python environments rather than installing the package into every Python environment that ou create.</p>
+<p>You can also install grayskull using pipx<a class="footnote-reference brackets" href="#pipx" id="id2" role="doc-noteref"><span class="fn-bracket">[</span>2<span class="fn-bracket">]</span></a>. pipx is a tool that allows you to install commonly used tools that you might want to have available across multiple Python environments rather than installing the package into every Python environment that you create.</p>
 </div>
 </section>
 <section id="step-2-fork-and-clone-the-conda-forge-staged-recipes-repository">
@@ -824,7 +856,7 @@ The home item is expected in the about section.
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header sd-bg-secondary sd-bg-text-secondary">
 <span class="sd-summary-icon"><svg version="1.1" width="1.0em" height="1.0em" class="sd-octicon sd-octicon-unlock" viewBox="0 0 16 16" aria-hidden="true"><path d="M5.5 4v2h7A1.5 1.5 0 0 1 14 7.5v6a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 2 13.5v-6A1.5 1.5 0 0 1 3.499 6H4V4a4 4 0 0 1 7.371-2.154.75.75 0 0 1-1.264.808A2.5 2.5 0 0 0 5.5 4Zm-2 3.5v6h9v-6h-9Z"></path></svg></span><span class="sd-summary-text">Conda-forge checklist help</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
-<h3 class="rubric" id="conda-forge-staged-recipes-pull-request-checklist">Conda-forge Staged-recipes Pull Request Checklist</h3>
+<p class="rubric" id="conda-forge-staged-recipes-pull-request-checklist">Conda-forge Staged-recipes Pull Request Checklist</p>
 <p class="sd-card-text">When you submit your package to conda-forge, the pull request template includes a list of checks that you want to ensure you have covered.</p>
 <p class="sd-card-text">Below we break down each element of that list.</p>
 <div class="note admonition">
@@ -944,6 +976,8 @@ We cover that next.</p>
 </section>
 <section id="footnotes">
 <h2>Footnotes<a class="headerlink" href="#footnotes" title="Link to this heading">#</a></h2>
+</section>
+</section>
 <aside class="footnote-list brackets">
 <aside class="footnote brackets" id="grayskull" role="doc-footnote">
 <span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id1">1</a><span class="fn-bracket">]</span></span>
@@ -954,8 +988,6 @@ We cover that next.</p>
 <p><a class="reference external" href="https://pipx.pypa.io/stable/">Pipx documentation</a></p>
 </aside>
 </aside>
-</section>
-</section>
 
 
                 </article>
