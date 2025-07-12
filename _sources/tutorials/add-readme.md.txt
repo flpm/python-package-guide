@@ -1,7 +1,6 @@
 ---
 :og:description: Learn how to create a clear, effective README file for your Python package. This lesson covers what to include, why each section matters, and how a well-structured README improves usability and discoverability on GitHub and PyPI.
 :og:title: Add a README file to your Python package
-date: 1970-01-03
 ---
 
 # Add a README file to your Python package
@@ -9,7 +8,7 @@ date: 1970-01-03
 In the previous lessons you learned:
 
 1. [What a Python package is](intro.md)
-2. [How to make your code installable](installable-code)
+2. [How to make your code installable](create-python-package)
 3. [How to publish your package to (test) PyPI](publish-pypi.md)
 4. [How to publish your package to conda-forge](publish-conda-forge.md)
 
