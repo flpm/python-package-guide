@@ -42,10 +42,10 @@
 <link href="_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
 
     <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=8f2a1f02" />
-    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
-    <link rel="stylesheet" type="text/css" href="_static/pyos.css?v=94b124cf" />
+    <link rel="stylesheet" type="text/css" href="_static/pyos.css?v=676a615a" />
   
   <!-- So that users can add custom icons -->
   <script src="_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
@@ -541,7 +541,7 @@
 <p>レポジトリをフォークする、</p>
 <ol class="arabic simple">
 <li><p>GitHubにログインしていることを確認してください。</p></li>
-<li><p>フォークしたいリポジトリ、ここでは <a class="reference external" href="https://www.github.com/pyopensci/python-package-guide">Pythonパッケージングガイド</a> リポジトリに移動します。</p></li>
+<li><p>Go to the repo you would like to fork, in this case the <a class="reference external" href="https://github.com/pyopensci/python-package-guide">Python Packaging Guide</a> repo.</p></li>
 <li><p>ページの右上に 'Fork' ボタンがあります。そのボタンをクリックしてください。 新しいページが表示され、そこで '新しいフォークを作成' します。 デフォルトの入力のまま、'Create fork' をクリックします。 これで、 <code class="docutils literal notranslate"><span class="pre">https://github.com/&lt;username&gt;1/python-package-guide</span></code> にリポジトリのコピーが作成されます。 <code class="docutils literal notranslate"><span class="pre">&lt;username&gt;</span></code> はあなたの GitHub ユーザー名です。</p></li>
 </ol>
 <img width="395" alt="fork_repo" src="https://github.com/user-attachments/assets/949223fb-b58b-4b6d-85db-003bd117da46">
@@ -675,6 +675,12 @@
 </pre></div>
 </div>
 <p>ローカルに構築されたガイドを見るには、ブラウザで <code class="docutils literal notranslate"><span class="pre">_build/html/index.html</span></code> ファイルを開いてください。</p>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">docs-linkcheck</span></code>: this session checks that links in documentation work</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>nox<span class="w"> </span>-e<span class="w"> </span>docs-linkcheck
+</pre></div>
+</div>
+<p>If the tests fail, you will see logs in the terminal and in <code class="docutils literal notranslate"><span class="pre">_build/linkcheck_output/output.txt</span></code>.</p>
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">docs-test</span></code>: このセッションでは、ガイドのテストを実行します。</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>nox<span class="w"> </span>-e<span class="w"> </span>docs-test
@@ -825,7 +831,6 @@
 <span class="sb">```toml</span>
 <span class="n">classifiers</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span>
 <span class="w">    </span><span class="s2">&quot;Programming Language :: Python :: 3&quot;</span><span class="p">,</span>
-<span class="w">    </span><span class="s2">&quot;License :: OSI Approved :: BSD License&quot;</span><span class="p">,</span>
 <span class="w">    </span><span class="s2">&quot;Operating System :: OS Independent&quot;</span><span class="p">,</span>
 <span class="p">]</span>
 <span class="sb">```</span>
